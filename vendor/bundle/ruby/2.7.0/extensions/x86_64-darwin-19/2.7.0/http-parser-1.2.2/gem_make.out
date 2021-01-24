@@ -1,5 +1,0 @@
-current directory: /Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/gems/http-parser-1.2.2/ext
-/Users/nmadhab/.rvm/rubies/ruby-2.7.2/bin/ruby -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems -rrubygems /Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/gems/rake-13.0.3/exe/rake RUBYARCHDIR\=/Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/extensions/x86_64-darwin-19/2.7.0/http-parser-1.2.2 RUBYLIBDIR\=/Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/extensions/x86_64-darwin-19/2.7.0/http-parser-1.2.2
-mkdir -p x86_64-darwin/http-parser
-gcc -fexceptions -O -fno-omit-frame-pointer -fno-strict-aliasing -Wall -Wextra -O3 -arch x86_64   -o x86_64-darwin/http-parser/http_parser.o -c ./http-parser/http_parser.c
-gcc -bundle -o x86_64-darwin/libhttp-parser-ext.bundle x86_64-darwin/http-parser/http_parser.o -fexceptions -arch x86_64 

@@ -1,3 +1,0 @@
-class MissingEnvVarError < StandardError
-end
-

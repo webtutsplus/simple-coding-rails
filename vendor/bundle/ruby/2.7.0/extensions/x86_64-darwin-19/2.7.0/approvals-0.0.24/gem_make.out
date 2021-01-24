@@ -1,6 +1,0 @@
-current directory: /Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/gems/approvals-0.0.24/ext
-/Users/nmadhab/.rvm/rubies/ruby-2.7.2/bin/ruby mkrf_conf.rb
-Building native extensions. This could take a while...
-
-current directory: /Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/gems/approvals-0.0.24/ext
-/Users/nmadhab/.rvm/rubies/ruby-2.7.2/bin/ruby -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/rubygems -rrubygems /Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/gems/rake-13.0.3/exe/rake RUBYARCHDIR\=/Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/extensions/x86_64-darwin-19/2.7.0/approvals-0.0.24 RUBYLIBDIR\=/Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/extensions/x86_64-darwin-19/2.7.0/approvals-0.0.24

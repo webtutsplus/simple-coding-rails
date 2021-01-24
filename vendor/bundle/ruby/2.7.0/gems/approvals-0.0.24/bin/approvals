@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'rubygems'
-require 'thor'
-require 'approvals/cli'
-
-Approvals::CLI.start
-
