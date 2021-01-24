@@ -1,0 +1,15 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["analyticsArticle"],{
+
+/***/ "./app/javascript/packs/analyticsArticle.js":
+/*!**************************************************!*\
+  !*** ./app/javascript/packs/analyticsArticle.js ***!
+  \**************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _analytics_dashboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../analytics/dashboard */ \"./app/javascript/analytics/dashboard.js\");\n\n\nfunction initDashboardArticle() {\n  var article = document.getElementById('article');\n  var _article$dataset = article.dataset,\n      articleId = _article$dataset.articleId,\n      organizationId = _article$dataset.organizationId;\n  Object(_analytics_dashboard__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({\n    articleId: articleId,\n    organizationId: organizationId\n  });\n}\n\nwindow.InstantClick.on('change', function () {\n  initDashboardArticle();\n});\ninitDashboardArticle();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9hcHAvamF2YXNjcmlwdC9wYWNrcy9hbmFseXRpY3NBcnRpY2xlLmpzPzMyZGMiXSwibmFtZXMiOlsiaW5pdERhc2hib2FyZEFydGljbGUiLCJhcnRpY2xlIiwiZG9jdW1lbnQiLCJnZXRFbGVtZW50QnlJZCIsImRhdGFzZXQiLCJhcnRpY2xlSWQiLCJvcmdhbml6YXRpb25JZCIsImluaXRDaGFydHMiLCJ3aW5kb3ciLCJJbnN0YW50Q2xpY2siLCJvbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBOztBQUVBLFNBQVNBLG9CQUFULEdBQWdDO0FBQzlCLE1BQU1DLE9BQU8sR0FBR0MsUUFBUSxDQUFDQyxjQUFULENBQXdCLFNBQXhCLENBQWhCO0FBRDhCLHlCQUVRRixPQUFPLENBQUNHLE9BRmhCO0FBQUEsTUFFdEJDLFNBRnNCLG9CQUV0QkEsU0FGc0I7QUFBQSxNQUVYQyxjQUZXLG9CQUVYQSxjQUZXO0FBRzlCQyxzRUFBVSxDQUFDO0FBQUVGLGFBQVMsRUFBVEEsU0FBRjtBQUFhQyxrQkFBYyxFQUFkQTtBQUFiLEdBQUQsQ0FBVjtBQUNEOztBQUVERSxNQUFNLENBQUNDLFlBQVAsQ0FBb0JDLEVBQXBCLENBQXVCLFFBQXZCLEVBQWlDLFlBQU07QUFDckNWLHNCQUFvQjtBQUNyQixDQUZEO0FBSUFBLG9CQUFvQiIsImZpbGUiOiIuL2FwcC9qYXZhc2NyaXB0L3BhY2tzL2FuYWx5dGljc0FydGljbGUuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgaW5pdENoYXJ0cyBmcm9tICcuLi9hbmFseXRpY3MvZGFzaGJvYXJkJztcblxuZnVuY3Rpb24gaW5pdERhc2hib2FyZEFydGljbGUoKSB7XG4gIGNvbnN0IGFydGljbGUgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYXJ0aWNsZScpO1xuICBjb25zdCB7IGFydGljbGVJZCwgb3JnYW5pemF0aW9uSWQgfSA9IGFydGljbGUuZGF0YXNldDtcbiAgaW5pdENoYXJ0cyh7IGFydGljbGVJZCwgb3JnYW5pemF0aW9uSWQgfSk7XG59XG5cbndpbmRvdy5JbnN0YW50Q2xpY2sub24oJ2NoYW5nZScsICgpID0+IHtcbiAgaW5pdERhc2hib2FyZEFydGljbGUoKTtcbn0pO1xuXG5pbml0RGFzaGJvYXJkQXJ0aWNsZSgpO1xuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./app/javascript/packs/analyticsArticle.js\n");
+
+/***/ })
+
+},[["./app/javascript/packs/analyticsArticle.js","runtime~analyticsArticle","analyticsArticle~analyticsDashboard"]]]);

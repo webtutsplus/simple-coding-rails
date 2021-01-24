@@ -1,0 +1,16 @@
+current directory: /Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/Users/nmadhab/.rvm/rubies/ruby-2.7.2/bin/ruby -I /Users/nmadhab/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20210124-85244-6ffwir.rb extconf.rb
+creating Makefile
+
+current directory: /Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" clean
+
+current directory: /Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR="
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+
+current directory: /Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 fastfilereaderext.bundle ./.gem.20210124-85244-1g1mgac

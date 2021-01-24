@@ -1,0 +1,15 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["analyticsDashboard"],{
+
+/***/ "./app/javascript/packs/analyticsDashboard.js":
+/*!****************************************************!*\
+  !*** ./app/javascript/packs/analyticsDashboard.js ***!
+  \****************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _analytics_dashboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../analytics/dashboard */ \"./app/javascript/analytics/dashboard.js\");\n\n\nfunction initDashboard() {\n  var activeOrg = document.querySelector('.organization.active');\n\n  if (activeOrg) {\n    Object(_analytics_dashboard__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({\n      organizationId: activeOrg.dataset.organizationId\n    });\n  } else {\n    Object(_analytics_dashboard__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({\n      organizationId: null\n    });\n  }\n}\n\nwindow.InstantClick.on('change', function () {\n  initDashboard();\n});\ninitDashboard();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9hcHAvamF2YXNjcmlwdC9wYWNrcy9hbmFseXRpY3NEYXNoYm9hcmQuanM/NzRlNiJdLCJuYW1lcyI6WyJpbml0RGFzaGJvYXJkIiwiYWN0aXZlT3JnIiwiZG9jdW1lbnQiLCJxdWVyeVNlbGVjdG9yIiwiaW5pdENoYXJ0cyIsIm9yZ2FuaXphdGlvbklkIiwiZGF0YXNldCIsIndpbmRvdyIsIkluc3RhbnRDbGljayIsIm9uIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7O0FBRUEsU0FBU0EsYUFBVCxHQUF5QjtBQUN2QixNQUFNQyxTQUFTLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixzQkFBdkIsQ0FBbEI7O0FBQ0EsTUFBSUYsU0FBSixFQUFlO0FBQ2JHLHdFQUFVLENBQUM7QUFBRUMsb0JBQWMsRUFBRUosU0FBUyxDQUFDSyxPQUFWLENBQWtCRDtBQUFwQyxLQUFELENBQVY7QUFDRCxHQUZELE1BRU87QUFDTEQsd0VBQVUsQ0FBQztBQUFFQyxvQkFBYyxFQUFFO0FBQWxCLEtBQUQsQ0FBVjtBQUNEO0FBQ0Y7O0FBRURFLE1BQU0sQ0FBQ0MsWUFBUCxDQUFvQkMsRUFBcEIsQ0FBdUIsUUFBdkIsRUFBaUMsWUFBTTtBQUNyQ1QsZUFBYTtBQUNkLENBRkQ7QUFJQUEsYUFBYSIsImZpbGUiOiIuL2FwcC9qYXZhc2NyaXB0L3BhY2tzL2FuYWx5dGljc0Rhc2hib2FyZC5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBpbml0Q2hhcnRzIGZyb20gJy4uL2FuYWx5dGljcy9kYXNoYm9hcmQnO1xuXG5mdW5jdGlvbiBpbml0RGFzaGJvYXJkKCkge1xuICBjb25zdCBhY3RpdmVPcmcgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcub3JnYW5pemF0aW9uLmFjdGl2ZScpO1xuICBpZiAoYWN0aXZlT3JnKSB7XG4gICAgaW5pdENoYXJ0cyh7IG9yZ2FuaXphdGlvbklkOiBhY3RpdmVPcmcuZGF0YXNldC5vcmdhbml6YXRpb25JZCB9KTtcbiAgfSBlbHNlIHtcbiAgICBpbml0Q2hhcnRzKHsgb3JnYW5pemF0aW9uSWQ6IG51bGwgfSk7XG4gIH1cbn1cblxud2luZG93Lkluc3RhbnRDbGljay5vbignY2hhbmdlJywgKCkgPT4ge1xuICBpbml0RGFzaGJvYXJkKCk7XG59KTtcblxuaW5pdERhc2hib2FyZCgpO1xuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./app/javascript/packs/analyticsDashboard.js\n");
+
+/***/ })
+
+},[["./app/javascript/packs/analyticsDashboard.js","runtime~analyticsDashboard","analyticsArticle~analyticsDashboard"]]]);

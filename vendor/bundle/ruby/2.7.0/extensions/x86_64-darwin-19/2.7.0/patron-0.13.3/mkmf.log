@@ -1,0 +1,155 @@
+find_executable: checking for curl-config... -------------------- yes
+
+--------------------
+
+have_header: checking for ruby/thread.h... -------------------- yes
+
+"gcc -o conftest -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/x86_64-darwin19 -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/backward -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0 -I.  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens  -fno-common -pipe  -pedantic -Wall conftest.c  -L. -L/Users/nmadhab/.rvm/rubies/ruby-2.7.2/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib     -lruby.2.7    -lcurl"
+In file included from conftest.c:1:
+In file included from /Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby.h:33:
+/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/ruby.h:2521:20: warning: 'diagnose_if' is a clang extension [-Wgcc-compat]
+    __attribute__((diagnose_if(rb_scan_args_count(fmt)<0,"bad scan arg format","error")))
+                   ^
+/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/ruby.h:2522:20: warning: 'diagnose_if' is a clang extension [-Wgcc-compat]
+    __attribute__((diagnose_if(rb_scan_args_count(fmt)!=varc,"variable argument length doesn't match","error")))
+                   ^
+2 warnings generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+"gcc -E -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/x86_64-darwin19 -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/backward -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0 -I.  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens  -fno-common -pipe  -pedantic -Wall  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/thread.h>
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_blocking_region() in ruby.h... -------------------- no
+
+"gcc -o conftest -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/x86_64-darwin19 -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/backward -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0 -I.  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens  -fno-common -pipe  -pedantic -Wall conftest.c  -L. -L/Users/nmadhab/.rvm/rubies/ruby-2.7.2/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib     -lruby.2.7    -lcurl"
+In file included from conftest.c:1:
+In file included from /Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby.h:33:
+/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/ruby.h:2521:20: warning: 'diagnose_if' is a clang extension [-Wgcc-compat]
+    __attribute__((diagnose_if(rb_scan_args_count(fmt)<0,"bad scan arg format","error")))
+                   ^
+/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/ruby.h:2522:20: warning: 'diagnose_if' is a clang extension [-Wgcc-compat]
+    __attribute__((diagnose_if(rb_scan_args_count(fmt)!=varc,"variable argument length doesn't match","error")))
+                   ^
+conftest.c:16:57: error: use of undeclared identifier 'rb_thread_blocking_region'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return !p; }
+                                                        ^
+2 warnings and 1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return !p; }
+/* end */
+
+"gcc -o conftest -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/x86_64-darwin19 -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/backward -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0 -I.  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens  -fno-common -pipe  -pedantic -Wall conftest.c  -L. -L/Users/nmadhab/.rvm/rubies/ruby-2.7.2/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib     -lruby.2.7    -lcurl"
+In file included from conftest.c:1:
+In file included from /Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby.h:33:
+/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/ruby.h:2521:20: warning: 'diagnose_if' is a clang extension [-Wgcc-compat]
+    __attribute__((diagnose_if(rb_scan_args_count(fmt)<0,"bad scan arg format","error")))
+                   ^
+/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/ruby.h:2522:20: warning: 'diagnose_if' is a clang extension [-Wgcc-compat]
+    __attribute__((diagnose_if(rb_scan_args_count(fmt)!=varc,"variable argument length doesn't match","error")))
+                   ^
+2 warnings generated.
+Undefined symbols for architecture x86_64:
+  "_rb_thread_blocking_region", referenced from:
+      _t in conftest-1289ec.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: extern void rb_thread_blocking_region();
+17: int t(void) { rb_thread_blocking_region(); return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for ruby/thread.h... -------------------- yes
+
+"gcc -E -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/x86_64-darwin19 -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/backward -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0 -I.  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens  -fno-common -pipe  -pedantic -Wall  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/thread.h>
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_call_without_gvl() in ruby/thread.h... -------------------- yes
+
+"gcc -o conftest -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/x86_64-darwin19 -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/backward -I/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0 -I.  -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wmissing-noreturn -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens  -fno-common -pipe  -pedantic -Wall conftest.c  -L. -L/Users/nmadhab/.rvm/rubies/ruby-2.7.2/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -L. -fstack-protector-strong -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib     -lruby.2.7    -lcurl"
+In file included from conftest.c:1:
+In file included from /Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby.h:33:
+/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/ruby.h:2521:20: warning: 'diagnose_if' is a clang extension [-Wgcc-compat]
+    __attribute__((diagnose_if(rb_scan_args_count(fmt)<0,"bad scan arg format","error")))
+                   ^
+/Users/nmadhab/.rvm/rubies/ruby-2.7.2/include/ruby-2.7.0/ruby/ruby.h:2522:20: warning: 'diagnose_if' is a clang extension [-Wgcc-compat]
+    __attribute__((diagnose_if(rb_scan_args_count(fmt)!=varc,"variable argument length doesn't match","error")))
+                   ^
+2 warnings generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby/thread.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_call_without_gvl; return !p; }
+/* end */
+
+--------------------
+

@@ -1,0 +1,27 @@
+Documentation:
+  Enabled: false
+
+AllCops:
+  TargetRubyVersion: 2.4.0
+
+Metrics/LineLength:
+  Enabled:
+    Max: 80
+
+Style/GuardClause:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Exclude:
+    - "spec/**/*.rb"
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*.rb"
+    - "pusher-push-notifications.gemspec"

@@ -1,0 +1,15 @@
+current directory: /Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+/Users/nmadhab/.rvm/rubies/ruby-2.7.2/bin/ruby -I /Users/nmadhab/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0 -r ./siteconf20210124-85244-7ur22g.rb extconf.rb
+creating Makefile
+
+current directory: /Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/nmadhab/hobby/forem/vendor/bundle/ruby/2.7.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 debug_inspector.bundle ./.gem.20210124-85244-egvo37
