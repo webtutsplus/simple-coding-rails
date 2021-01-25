@@ -1,0 +1,1360 @@
+Unset ENV variable: IMGPROXY_KEY.
+Unset ENV variable: IMGPROXY_SALT.
+Unset ENV variable: RELEASE_FOOTPRINT.
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=4.7.2 framework=rails level=1 pid=53258
+** [Honeybadger] Reporting error id=c3b317bb-a60c-44d8-a1b5-d2ef0005e8d5 level=1 pid=53258
+Unset ENV variable: IMGPROXY_KEY.
+Unset ENV variable: IMGPROXY_SALT.
+Unset ENV variable: RELEASE_FOOTPRINT.
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=4.7.2 framework=rails level=1 pid=53746
+** [Honeybadger] Reporting error id=387f569a-0810-4506-b40e-cb4a0ad1e763 level=1 pid=53746
+Unset ENV variable: IMGPROXY_KEY.
+Unset ENV variable: IMGPROXY_SALT.
+Unset ENV variable: RELEASE_FOOTPRINT.
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=4.7.2 framework=rails level=1 pid=54437
+Unset ENV variable: IMGPROXY_KEY.
+Unset ENV variable: IMGPROXY_SALT.
+Unset ENV variable: RELEASE_FOOTPRINT.
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=4.7.2 framework=rails level=1 pid=54456
+  [1m[35m (69.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "practicaldeveloper_test"[0m
+  [1m[35m (179.1ms)[0m  [1m[35mCREATE DATABASE "practicaldeveloper_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (60.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "citext"[0m
+  [1m[35mSQL (25.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "pgcrypto"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "ahoy_events" CASCADE[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "ahoy_events" ("id" bigserial primary key, "name" character varying, "properties" jsonb, "time" timestamp, "user_id" bigint, "visit_id" bigint)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_ahoy_events_on_name_and_time" ON "ahoy_events"  ("name", "time")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_ahoy_events_on_properties" ON "ahoy_events" USING gin ("properties" jsonb_path_ops)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_ahoy_events_on_user_id" ON "ahoy_events"  ("user_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_ahoy_events_on_visit_id" ON "ahoy_events"  ("visit_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "ahoy_messages" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ahoy_messages" ("id" bigserial primary key, "clicked_at" timestamp, "content" text, "feedback_message_id" bigint, "mailer" character varying, "opened_at" timestamp, "sent_at" timestamp, "subject" text, "to" text, "token" character varying, "user_id" bigint, "user_type" character varying, "utm_campaign" character varying, "utm_content" character varying, "utm_medium" character varying, "utm_source" character varying, "utm_term" character varying)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_ahoy_messages_on_to" ON "ahoy_messages"  ("to")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_ahoy_messages_on_token" ON "ahoy_messages"  ("token")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_ahoy_messages_on_user_id_and_mailer" ON "ahoy_messages"  ("user_id", "mailer")[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_ahoy_messages_on_user_id_and_user_type" ON "ahoy_messages"  ("user_id", "user_type")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "ahoy_visits" CASCADE[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "ahoy_visits" ("id" bigserial primary key, "started_at" timestamp, "user_id" bigint, "visit_token" character varying, "visitor_token" character varying)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_ahoy_visits_on_user_id" ON "ahoy_visits"  ("user_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_ahoy_visits_on_visit_token" ON "ahoy_visits"  ("visit_token")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "announcements" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "announcements" ("id" bigserial primary key, "banner_style" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "api_secrets" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "api_secrets" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "description" character varying NOT NULL, "secret" character varying, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_api_secrets_on_secret" ON "api_secrets"  ("secret")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_api_secrets_on_user_id" ON "api_secrets"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "articles" CASCADE[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "articles" ("id" bigserial primary key, "any_comments_hidden" boolean DEFAULT FALSE, "approved" boolean DEFAULT FALSE, "archived" boolean DEFAULT FALSE, "body_html" text, "body_markdown" text, "boost_states" jsonb DEFAULT '{}' NOT NULL, "cached_organization" text, "cached_tag_list" character varying, "cached_user" text, "cached_user_name" character varying, "cached_user_username" character varying, "canonical_url" character varying, "co_author_ids" bigint[] DEFAULT '{}', "collection_id" bigint, "comment_score" integer DEFAULT 0, "comment_template" character varying, "comments_count" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "crossposted_at" timestamp, "description" character varying, "edited_at" timestamp, "email_digest_eligible" boolean DEFAULT TRUE, "experience_level_rating" float DEFAULT 5.0, "experience_level_rating_distribution" float DEFAULT 5.0, "facebook_last_buffered" timestamp, "featured" boolean DEFAULT FALSE, "featured_number" integer, "feed_source_url" character varying, "hotness_score" integer DEFAULT 0, "language" character varying, "last_buffered" timestamp, "last_comment_at" timestamp DEFAULT '2017-01-01 05:00:00', "last_experience_level_rating_at" timestamp, "main_image" character varying, "main_image_background_hex_color" character varying DEFAULT '#dddddd', "nth_published_by_author" integer DEFAULT 0, "organic_page_views_count" integer DEFAULT 0, "organic_page_views_past_month_count" integer DEFAULT 0, "organic_page_views_past_week_count" integer DEFAULT 0, "organization_id" bigint, "originally_published_at" timestamp, "page_views_count" integer DEFAULT 0, "password" character varying, "path" character varying, "positive_reactions_count" integer DEFAULT 0 NOT NULL, "previous_positive_reactions_count" integer DEFAULT 0, "previous_public_reactions_count" integer DEFAULT 0 NOT NULL, "processed_html" text, "public_reactions_count" integer DEFAULT 0 NOT NULL, "published" boolean DEFAULT FALSE, "published_at" timestamp, "published_from_feed" boolean DEFAULT FALSE, "rating_votes_count" integer DEFAULT 0 NOT NULL, "reactions_count" integer DEFAULT 0 NOT NULL, "reading_time" integer DEFAULT 0, "receive_notifications" boolean DEFAULT TRUE, "score" integer DEFAULT 0, "search_optimized_description_replacement" character varying, "search_optimized_title_preamble" character varying, "show_comments" boolean DEFAULT TRUE, "slug" text, "social_image" character varying, "spaminess_rating" integer DEFAULT 0, "title" character varying, "updated_at" timestamp NOT NULL, "user_id" bigint, "user_subscriptions_count" integer DEFAULT 0 NOT NULL, "video" character varying, "video_closed_caption_track_url" character varying, "video_code" character varying, "video_duration_in_seconds" float DEFAULT 0.0, "video_source_url" character varying, "video_state" character varying, "video_thumbnail_url" character varying)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_articles_on_user_id_and_title_and_digest_body_markdown" ON "articles"  (user_id, title, digest(body_markdown, 'sha512'::text))[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_articles_on_boost_states" ON "articles" USING gin ("boost_states")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_articles_on_canonical_url" ON "articles"  ("canonical_url")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_articles_on_comment_score" ON "articles"  ("comment_score")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_articles_on_featured_number" ON "articles"  ("featured_number")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_articles_on_feed_source_url" ON "articles"  ("feed_source_url")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_articles_on_hotness_score" ON "articles"  ("hotness_score")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_articles_on_path" ON "articles"  ("path")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_articles_on_public_reactions_count" ON "articles"  ("public_reactions_count" DESC)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_articles_on_published" ON "articles"  ("published")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_articles_on_published_at" ON "articles"  ("published_at")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_articles_on_slug_and_user_id" ON "articles"  ("slug", "user_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_articles_on_user_id" ON "articles"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "audit_logs" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "audit_logs" ("id" bigserial primary key, "category" character varying, "created_at" timestamp NOT NULL, "data" jsonb DEFAULT '{}' NOT NULL, "roles" character varying[], "slug" character varying, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_audit_logs_on_data" ON "audit_logs" USING gin ("data")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_audit_logs_on_user_id" ON "audit_logs"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "badge_achievements" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "badge_achievements" ("id" bigserial primary key, "badge_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "rewarder_id" bigint, "rewarding_context_message" text, "rewarding_context_message_markdown" text, "updated_at" timestamp NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_badge_achievements_on_badge_id_and_user_id" ON "badge_achievements"  ("badge_id", "user_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_badge_achievements_on_user_id_and_badge_id" ON "badge_achievements"  ("user_id", "badge_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "badges" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "badges" ("id" bigserial primary key, "badge_image" character varying, "created_at" timestamp NOT NULL, "description" character varying NOT NULL, "slug" character varying NOT NULL, "title" character varying NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_badges_on_slug" ON "badges"  ("slug")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_badges_on_title" ON "badges"  ("title")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "banished_users" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "banished_users" ("id" bigserial primary key, "banished_by_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "username" character varying)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_banished_users_on_banished_by_id" ON "banished_users"  ("banished_by_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_banished_users_on_username" ON "banished_users"  ("username")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "blazer_audits" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "blazer_audits" ("id" bigserial primary key, "created_at" timestamp, "data_source" character varying, "query_id" bigint, "statement" text, "user_id" bigint)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_blazer_audits_on_query_id" ON "blazer_audits"  ("query_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_blazer_audits_on_user_id" ON "blazer_audits"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "blazer_checks" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "blazer_checks" ("id" bigserial primary key, "check_type" character varying, "created_at" timestamp NOT NULL, "creator_id" bigint, "emails" text, "last_run_at" timestamp, "message" text, "query_id" bigint, "schedule" character varying, "slack_channels" text, "state" character varying, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_blazer_checks_on_creator_id" ON "blazer_checks"  ("creator_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_blazer_checks_on_query_id" ON "blazer_checks"  ("query_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "blazer_dashboard_queries" CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "blazer_dashboard_queries" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "dashboard_id" bigint, "position" integer, "query_id" bigint, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_blazer_dashboard_queries_on_dashboard_id" ON "blazer_dashboard_queries"  ("dashboard_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_blazer_dashboard_queries_on_query_id" ON "blazer_dashboard_queries"  ("query_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "blazer_dashboards" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "blazer_dashboards" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "creator_id" bigint, "name" text, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_blazer_dashboards_on_creator_id" ON "blazer_dashboards"  ("creator_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "blazer_queries" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "blazer_queries" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "creator_id" bigint, "data_source" character varying, "description" text, "name" character varying, "statement" text, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_blazer_queries_on_creator_id" ON "blazer_queries"  ("creator_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "broadcasts" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "broadcasts" ("id" bigserial primary key, "active" boolean DEFAULT FALSE, "active_status_updated_at" timestamp, "banner_style" character varying, "body_markdown" text, "broadcastable_id" bigint, "broadcastable_type" character varying, "created_at" timestamp, "processed_html" text, "title" character varying, "type_of" character varying, "updated_at" timestamp)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_broadcasts_on_broadcastable_type_and_broadcastable_id" ON "broadcasts"  ("broadcastable_type", "broadcastable_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_broadcasts_on_title_and_type_of" ON "broadcasts"  ("title", "type_of")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "buffer_updates" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "buffer_updates" ("id" bigserial primary key, "approver_user_id" bigint, "article_id" bigint NOT NULL, "body_text" text, "buffer_id_code" character varying, "buffer_profile_id_code" character varying, "buffer_response" text DEFAULT '--- {}
+', "composer_user_id" bigint, "created_at" timestamp NOT NULL, "social_service_name" character varying, "status" character varying DEFAULT 'pending', "tag_id" bigint, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "chat_channel_memberships" CASCADE[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "chat_channel_memberships" ("id" bigserial primary key, "chat_channel_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "has_unopened_messages" boolean DEFAULT FALSE, "last_opened_at" timestamp DEFAULT '2017-01-01 05:00:00', "role" character varying DEFAULT 'member', "show_global_badge_notification" boolean DEFAULT TRUE, "status" character varying DEFAULT 'active', "updated_at" timestamp NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_chat_channel_memberships_on_chat_channel_id_and_user_id" ON "chat_channel_memberships"  ("chat_channel_id", "user_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_chat_channel_memberships_on_user_id_and_chat_channel_id" ON "chat_channel_memberships"  ("user_id", "chat_channel_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "chat_channels" CASCADE[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "chat_channels" ("id" bigserial primary key, "channel_name" character varying, "channel_type" character varying NOT NULL, "created_at" timestamp NOT NULL, "description" character varying, "discoverable" boolean DEFAULT FALSE, "last_message_at" timestamp DEFAULT '2017-01-01 05:00:00', "slug" character varying, "status" character varying DEFAULT 'active', "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_chat_channels_on_slug" ON "chat_channels"  ("slug")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "classified_listing_categories" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "classified_listing_categories" ("id" bigserial primary key, "cost" integer NOT NULL, "created_at" timestamp NOT NULL, "name" character varying NOT NULL, "rules" character varying NOT NULL, "slug" character varying NOT NULL, "social_preview_color" character varying, "social_preview_description" character varying, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_classified_listing_categories_on_name" ON "classified_listing_categories"  ("name")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_classified_listing_categories_on_slug" ON "classified_listing_categories"  ("slug")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "classified_listings" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "classified_listings" ("id" bigserial primary key, "body_markdown" text, "bumped_at" timestamp, "cached_tag_list" character varying, "classified_listing_category_id" bigint, "contact_via_connect" boolean DEFAULT FALSE, "created_at" timestamp NOT NULL, "expires_at" timestamp, "last_buffered" timestamp, "location" character varying, "organization_id" bigint, "originally_published_at" timestamp, "processed_html" text, "published" boolean, "slug" character varying, "title" character varying, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_classified_listings_on_classified_listing_category_id" ON "classified_listings"  ("classified_listing_category_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_classified_listings_on_organization_id" ON "classified_listings"  ("organization_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_classified_listings_on_user_id" ON "classified_listings"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "collections" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "collections" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "description" character varying, "main_image" character varying, "organization_id" bigint, "published" boolean DEFAULT FALSE, "slug" character varying, "social_image" character varying, "title" character varying, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_collections_on_organization_id" ON "collections"  ("organization_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_collections_on_slug_and_user_id" ON "collections"  ("slug", "user_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_collections_on_user_id" ON "collections"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "ancestry" character varying, "body_html" text, "body_markdown" text, "commentable_id" bigint, "commentable_type" character varying, "created_at" timestamp NOT NULL, "deleted" boolean DEFAULT FALSE, "edited" boolean DEFAULT FALSE, "edited_at" timestamp, "hidden_by_commentable_user" boolean DEFAULT FALSE, "id_code" character varying, "markdown_character_count" integer, "positive_reactions_count" integer DEFAULT 0 NOT NULL, "processed_html" text, "public_reactions_count" integer DEFAULT 0 NOT NULL, "reactions_count" integer DEFAULT 0 NOT NULL, "receive_notifications" boolean DEFAULT TRUE, "score" integer DEFAULT 0, "spaminess_rating" integer DEFAULT 0, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_comments_on_body_markdown_user_ancestry_commentable" ON "comments"  (digest(body_markdown, 'sha512'::text), user_id, ancestry, commentable_id, commentable_type)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_ancestry" ON "comments"  ("ancestry")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_commentable_id_and_commentable_type" ON "comments"  ("commentable_id", "commentable_type")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_created_at" ON "comments"  ("created_at")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_score" ON "comments"  ("score")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_comments_on_user_id" ON "comments"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "credits" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "credits" ("id" bigserial primary key, "cost" float DEFAULT 0.0, "created_at" timestamp NOT NULL, "organization_id" bigint, "purchase_id" bigint, "purchase_type" character varying, "spent" boolean DEFAULT FALSE, "spent_at" timestamp, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_credits_on_purchase_id_and_purchase_type" ON "credits"  ("purchase_id", "purchase_type")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_credits_on_spent" ON "credits"  ("spent")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "custom_profile_fields" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "custom_profile_fields" ("id" bigserial primary key, "attribute_name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "description" character varying, "label" citext NOT NULL, "profile_id" bigint NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_custom_profile_fields_on_label_and_profile_id" ON "custom_profile_fields"  ("label", "profile_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_custom_profile_fields_on_profile_id" ON "custom_profile_fields"  ("profile_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "data_update_scripts" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "data_update_scripts" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "error" text, "file_name" character varying, "finished_at" timestamp, "run_at" timestamp, "status" integer DEFAULT 0 NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_data_update_scripts_on_file_name" ON "data_update_scripts"  ("file_name")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "display_ad_events" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "display_ad_events" ("id" bigserial primary key, "category" character varying, "context_type" character varying, "created_at" timestamp NOT NULL, "display_ad_id" bigint, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_display_ad_events_on_display_ad_id" ON "display_ad_events"  ("display_ad_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_display_ad_events_on_user_id" ON "display_ad_events"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "display_ads" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "display_ads" ("id" bigserial primary key, "approved" boolean DEFAULT FALSE, "body_markdown" text, "clicks_count" integer DEFAULT 0, "created_at" timestamp NOT NULL, "impressions_count" integer DEFAULT 0, "organization_id" bigint, "placement_area" character varying, "processed_html" text, "published" boolean DEFAULT FALSE, "success_rate" float DEFAULT 0.0, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "email_authorizations" CASCADE[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "email_authorizations" ("id" bigserial primary key, "confirmation_token" character varying, "created_at" timestamp NOT NULL, "json_data" jsonb DEFAULT '{}' NOT NULL, "type_of" character varying NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint, "verified_at" timestamp)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_email_authorizations_on_user_id" ON "email_authorizations"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "category" character varying, "cover_image" character varying, "created_at" timestamp NOT NULL, "description_html" text, "description_markdown" text, "ends_at" timestamp, "host_name" character varying, "live_now" boolean DEFAULT FALSE, "location_name" character varying, "location_url" character varying, "profile_image" character varying, "published" boolean, "slug" character varying, "starts_at" timestamp, "title" character varying, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "feedback_messages" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "feedback_messages" ("id" bigserial primary key, "affected_id" bigint, "category" character varying, "created_at" timestamp, "feedback_type" character varying, "message" text, "offender_id" bigint, "reported_url" character varying, "reporter_id" bigint, "status" character varying DEFAULT 'Open', "updated_at" timestamp)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_feedback_messages_on_affected_id" ON "feedback_messages"  ("affected_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_feedback_messages_on_offender_id" ON "feedback_messages"  ("offender_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_feedback_messages_on_reporter_id" ON "feedback_messages"  ("reporter_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "field_test_events" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "field_test_events" ("id" bigserial primary key, "created_at" timestamp, "field_test_membership_id" bigint, "name" character varying)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_field_test_events_on_field_test_membership_id" ON "field_test_events"  ("field_test_membership_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "field_test_memberships" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "field_test_memberships" ("id" bigserial primary key, "converted" boolean DEFAULT FALSE, "created_at" timestamp, "experiment" character varying, "participant_id" character varying, "participant_type" character varying, "variant" character varying)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_field_test_memberships_on_experiment_and_created_at" ON "field_test_memberships"  ("experiment", "created_at")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_field_test_memberships_on_participant" ON "field_test_memberships"  ("participant_type", "participant_id", "experiment")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "flipper_features" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "flipper_features" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "key" character varying NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_flipper_features_on_key" ON "flipper_features"  ("key")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "flipper_gates" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "flipper_gates" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "feature_key" character varying NOT NULL, "key" character varying NOT NULL, "updated_at" timestamp NOT NULL, "value" character varying)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_flipper_gates_on_feature_key_and_key_and_value" ON "flipper_gates"  ("feature_key", "key", "value")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "follows" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "follows" ("id" bigserial primary key, "blocked" boolean DEFAULT FALSE NOT NULL, "created_at" timestamp, "explicit_points" float DEFAULT 1.0, "followable_id" bigint NOT NULL, "followable_type" character varying NOT NULL, "follower_id" bigint NOT NULL, "follower_type" character varying NOT NULL, "implicit_points" float DEFAULT 0.0, "points" float DEFAULT 1.0, "subscription_status" character varying DEFAULT 'all_articles' NOT NULL, "updated_at" timestamp)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_follows_on_created_at" ON "follows"  ("created_at")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_follows_on_followable_and_follower" ON "follows"  ("followable_id", "followable_type", "follower_id", "follower_type")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "fk_followables" ON "follows"  ("followable_id", "followable_type")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "fk_follows" ON "follows"  ("follower_id", "follower_type")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "github_issues" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "github_issues" ("id" bigserial primary key, "category" character varying, "created_at" timestamp NOT NULL, "issue_serialized" character varying DEFAULT '--- {}
+', "processed_html" character varying, "updated_at" timestamp NOT NULL, "url" character varying)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_github_issues_on_url" ON "github_issues"  ("url")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "github_repos" CASCADE[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "github_repos" ("id" bigserial primary key, "additional_note" character varying, "bytes_size" integer, "created_at" timestamp NOT NULL, "description" character varying, "featured" boolean DEFAULT FALSE, "fork" boolean DEFAULT FALSE, "github_id_code" bigint, "info_hash" text DEFAULT '--- {}
+', "language" character varying, "name" character varying, "priority" integer DEFAULT 0, "stargazers_count" integer, "updated_at" timestamp NOT NULL, "url" character varying, "user_id" bigint, "watchers_count" integer)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_github_repos_on_github_id_code" ON "github_repos"  ("github_id_code")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_github_repos_on_url" ON "github_repos"  ("url")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "html_variant_successes" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "html_variant_successes" ("id" bigserial primary key, "article_id" bigint, "created_at" timestamp NOT NULL, "html_variant_id" bigint, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_html_variant_successes_on_html_variant_id_and_article_id" ON "html_variant_successes"  ("html_variant_id", "article_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "html_variant_trials" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "html_variant_trials" ("id" bigserial primary key, "article_id" bigint, "created_at" timestamp NOT NULL, "html_variant_id" bigint, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_html_variant_trials_on_html_variant_id_and_article_id" ON "html_variant_trials"  ("html_variant_id", "article_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "html_variants" CASCADE[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "html_variants" ("id" bigserial primary key, "approved" boolean DEFAULT FALSE, "created_at" timestamp NOT NULL, "group" character varying, "html" text, "name" character varying, "published" boolean DEFAULT FALSE, "success_rate" float DEFAULT 0.0, "target_tag" character varying, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_html_variants_on_name" ON "html_variants"  ("name")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "identities" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "identities" ("id" bigserial primary key, "auth_data_dump" text, "created_at" timestamp NOT NULL, "provider" character varying, "secret" character varying, "token" character varying, "uid" character varying, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_identities_on_provider_and_uid" ON "identities"  ("provider", "uid")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_identities_on_provider_and_user_id" ON "identities"  ("provider", "user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "mentions" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "mentions" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "mentionable_id" bigint, "mentionable_type" character varying, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_mentions_on_user_id_and_mentionable_id_mentionable_type" ON "mentions"  ("user_id", "mentionable_id", "mentionable_type")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "messages" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "chat_action" character varying, "chat_channel_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "edited_at" timestamp, "message_html" character varying NOT NULL, "message_markdown" character varying NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_messages_on_chat_channel_id" ON "messages"  ("chat_channel_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_messages_on_user_id" ON "messages"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "navigation_links" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "navigation_links" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "display_only_when_signed_in" boolean DEFAULT FALSE, "icon" character varying NOT NULL, "name" character varying NOT NULL, "position" integer, "updated_at" timestamp(6) NOT NULL, "url" character varying NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_navigation_links_on_url_and_name" ON "navigation_links"  ("url", "name")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "notes" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "notes" ("id" bigserial primary key, "author_id" bigint, "content" text, "created_at" timestamp NOT NULL, "noteable_id" bigint, "noteable_type" character varying, "reason" character varying, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "notification_subscriptions" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "notification_subscriptions" ("id" bigserial primary key, "config" text DEFAULT 'all_comments' NOT NULL, "created_at" timestamp NOT NULL, "notifiable_id" bigint NOT NULL, "notifiable_type" character varying NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_notification_subscriptions_on_notifiable_and_config" ON "notification_subscriptions"  ("notifiable_id", "notifiable_type", "config")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "idx_notification_subs_on_user_id_notifiable_type_notifiable_id" ON "notification_subscriptions"  ("user_id", "notifiable_type", "notifiable_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "notifications" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "notifications" ("id" bigserial primary key, "action" character varying, "created_at" timestamp NOT NULL, "json_data" jsonb, "notifiable_id" bigint, "notifiable_type" character varying, "notified_at" timestamp, "organization_id" bigint, "read" boolean DEFAULT FALSE, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_notifications_on_created_at" ON "notifications"  ("created_at")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_notifications_on_notifiable_id_notifiable_type_and_action" ON "notifications"  ("notifiable_id", "notifiable_type", "action")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_notifications_on_notifiable_type" ON "notifications"  ("notifiable_type")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_notifications_on_notified_at" ON "notifications"  ("notified_at")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_notifications_on_org_notifiable_and_action_not_null" ON "notifications"  ("organization_id", "notifiable_id", "notifiable_type", "action") WHERE (action IS NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_notifications_on_org_notifiable_action_is_null" ON "notifications"  ("organization_id", "notifiable_id", "notifiable_type") WHERE (action IS NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_notifications_on_user_notifiable_and_action_not_null" ON "notifications"  ("user_id", "notifiable_id", "notifiable_type", "action") WHERE (action IS NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_notifications_on_user_notifiable_action_is_null" ON "notifications"  ("user_id", "notifiable_id", "notifiable_type") WHERE (action IS NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_notifications_user_id_organization_id_notifiable_action" ON "notifications"  ("user_id", "organization_id", "notifiable_id", "notifiable_type", "action")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "oauth_access_grants" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "oauth_access_grants" ("id" bigserial primary key, "application_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "expires_in" integer NOT NULL, "redirect_uri" text NOT NULL, "resource_owner_id" bigint NOT NULL, "revoked_at" timestamp, "scopes" character varying, "token" character varying NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_oauth_access_grants_on_application_id" ON "oauth_access_grants"  ("application_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_oauth_access_grants_on_resource_owner_id" ON "oauth_access_grants"  ("resource_owner_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_oauth_access_grants_on_token" ON "oauth_access_grants"  ("token")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "oauth_access_tokens" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "oauth_access_tokens" ("id" bigserial primary key, "application_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "expires_in" integer, "previous_refresh_token" character varying DEFAULT '' NOT NULL, "refresh_token" character varying, "resource_owner_id" bigint, "revoked_at" timestamp, "scopes" character varying, "token" character varying NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_oauth_access_tokens_on_application_id" ON "oauth_access_tokens"  ("application_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_oauth_access_tokens_on_refresh_token" ON "oauth_access_tokens"  ("refresh_token")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_oauth_access_tokens_on_resource_owner_id" ON "oauth_access_tokens"  ("resource_owner_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_oauth_access_tokens_on_token" ON "oauth_access_tokens"  ("token")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "oauth_applications" CASCADE[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "oauth_applications" ("id" bigserial primary key, "confidential" boolean DEFAULT TRUE NOT NULL, "created_at" timestamp NOT NULL, "name" character varying NOT NULL, "redirect_uri" text NOT NULL, "scopes" character varying DEFAULT '' NOT NULL, "secret" character varying NOT NULL, "uid" character varying NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_oauth_applications_on_uid" ON "oauth_applications"  ("uid")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "organization_memberships" CASCADE[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "organization_memberships" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "organization_id" bigint NOT NULL, "type_of_user" character varying NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint NOT NULL, "user_title" character varying)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_organization_memberships_on_user_id_and_organization_id" ON "organization_memberships"  ("user_id", "organization_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "articles_count" integer DEFAULT 0 NOT NULL, "bg_color_hex" character varying, "company_size" character varying, "created_at" timestamp NOT NULL, "credits_count" integer DEFAULT 0 NOT NULL, "cta_body_markdown" text, "cta_button_text" character varying, "cta_button_url" character varying, "cta_processed_html" text, "dark_nav_image" character varying, "email" character varying, "github_username" character varying, "last_article_at" timestamp DEFAULT '2017-01-01 05:00:00', "latest_article_updated_at" timestamp, "location" character varying, "name" character varying, "nav_image" character varying, "old_old_slug" character varying, "old_slug" character varying, "profile_image" character varying, "profile_updated_at" timestamp DEFAULT '2017-01-01 05:00:00', "proof" text, "secret" character varying, "slug" character varying, "spent_credits_count" integer DEFAULT 0 NOT NULL, "story" character varying, "summary" text, "tag_line" character varying, "tech_stack" character varying, "text_color_hex" character varying, "twitter_username" character varying, "unspent_credits_count" integer DEFAULT 0 NOT NULL, "updated_at" timestamp NOT NULL, "url" character varying)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_organizations_on_secret" ON "organizations"  ("secret")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_organizations_on_slug" ON "organizations"  ("slug")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "page_views" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "page_views" ("id" bigserial primary key, "article_id" bigint, "counts_for_number_of_views" integer DEFAULT 1, "created_at" timestamp NOT NULL, "domain" character varying, "path" character varying, "referrer" character varying, "time_tracked_in_seconds" integer DEFAULT 15, "updated_at" timestamp NOT NULL, "user_agent" character varying, "user_id" bigint)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_page_views_on_article_id" ON "page_views"  ("article_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_page_views_on_created_at" ON "page_views"  ("created_at")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_page_views_on_user_id" ON "page_views"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "pages" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "pages" ("id" bigserial primary key, "body_html" text, "body_json" jsonb, "body_markdown" text, "created_at" timestamp NOT NULL, "description" character varying, "is_top_level_path" boolean DEFAULT FALSE, "processed_html" text, "slug" character varying, "social_image" character varying, "template" character varying, "title" character varying, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_pages_on_slug" ON "pages"  ("slug")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "podcast_episode_appearances" CASCADE[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "podcast_episode_appearances" ("id" bigserial primary key, "approved" boolean DEFAULT FALSE NOT NULL, "created_at" timestamp(6) NOT NULL, "featured_on_user_profile" boolean DEFAULT FALSE NOT NULL, "podcast_episode_id" bigint NOT NULL, "role" character varying DEFAULT 'guest' NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_pod_episode_appearances_on_podcast_episode_id_and_user_id" ON "podcast_episode_appearances"  ("podcast_episode_id", "user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "podcast_episodes" CASCADE[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "podcast_episodes" ("id" bigserial primary key, "any_comments_hidden" boolean DEFAULT FALSE, "body" text, "comments_count" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "duration_in_seconds" integer, "guid" character varying NOT NULL, "https" boolean DEFAULT TRUE, "image" character varying, "itunes_url" character varying, "media_url" character varying NOT NULL, "podcast_id" bigint, "processed_html" text, "published_at" timestamp, "quote" text, "reachable" boolean DEFAULT TRUE, "reactions_count" integer DEFAULT 0 NOT NULL, "slug" character varying NOT NULL, "social_image" character varying, "status_notice" character varying, "subtitle" character varying, "summary" text, "title" character varying NOT NULL, "updated_at" timestamp NOT NULL, "website_url" character varying)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_podcast_episodes_on_guid" ON "podcast_episodes"  ("guid")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_podcast_episodes_on_media_url" ON "podcast_episodes"  ("media_url")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_podcast_episodes_on_podcast_id" ON "podcast_episodes"  ("podcast_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_podcast_episodes_on_title" ON "podcast_episodes"  ("title")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_podcast_episodes_on_website_url" ON "podcast_episodes"  ("website_url")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "podcast_ownerships" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "podcast_ownerships" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "podcast_id" bigint NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_podcast_ownerships_on_podcast_id_and_user_id" ON "podcast_ownerships"  ("podcast_id", "user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "podcasts" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "podcasts" ("id" bigserial primary key, "android_url" character varying, "created_at" timestamp NOT NULL, "creator_id" bigint, "description" text, "feed_url" character varying NOT NULL, "image" character varying NOT NULL, "itunes_url" character varying, "main_color_hex" character varying NOT NULL, "overcast_url" character varying, "pattern_image" character varying, "published" boolean DEFAULT FALSE, "reachable" boolean DEFAULT TRUE, "slug" character varying NOT NULL, "soundcloud_url" character varying, "status_notice" text DEFAULT '', "title" character varying NOT NULL, "twitter_username" character varying, "unique_website_url?" boolean DEFAULT TRUE, "updated_at" timestamp NOT NULL, "website_url" character varying)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_podcasts_on_creator_id" ON "podcasts"  ("creator_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_podcasts_on_feed_url" ON "podcasts"  ("feed_url")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_podcasts_on_slug" ON "podcasts"  ("slug")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "poll_options" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "poll_options" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "markdown" character varying, "poll_id" bigint, "poll_votes_count" integer DEFAULT 0 NOT NULL, "processed_html" character varying, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "poll_skips" CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "poll_skips" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "poll_id" bigint, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_poll_skips_on_poll_and_user" ON "poll_skips"  ("poll_id", "user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "poll_votes" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "poll_votes" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "poll_id" bigint NOT NULL, "poll_option_id" bigint NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_poll_votes_on_poll_id_and_user_id" ON "poll_votes"  ("poll_id", "user_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_poll_votes_on_poll_option_and_user" ON "poll_votes"  ("poll_option_id", "user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "polls" CASCADE[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "polls" ("id" bigserial primary key, "article_id" bigint, "created_at" timestamp NOT NULL, "poll_options_count" integer DEFAULT 0 NOT NULL, "poll_skips_count" integer DEFAULT 0 NOT NULL, "poll_votes_count" integer DEFAULT 0 NOT NULL, "prompt_html" character varying, "prompt_markdown" character varying, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "profile_field_groups" CASCADE[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "profile_field_groups" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "description" character varying, "name" character varying NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_profile_field_groups_on_name" ON "profile_field_groups"  ("name")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "profile_fields" CASCADE[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "profile_fields" ("id" bigserial primary key, "attribute_name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "description" character varying, "display_area" integer DEFAULT 1 NOT NULL, "input_type" integer DEFAULT 0 NOT NULL, "label" citext NOT NULL, "placeholder_text" character varying, "profile_field_group_id" bigint, "show_in_onboarding" boolean DEFAULT FALSE NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_profile_fields_on_label" ON "profile_fields"  ("label")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_profile_fields_on_profile_field_group_id" ON "profile_fields"  ("profile_field_group_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "profile_pins" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "profile_pins" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "pinnable_id" bigint, "pinnable_type" character varying, "profile_id" bigint, "profile_type" character varying, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "idx_pins_on_pinnable_id_profile_id_profile_type_pinnable_type" ON "profile_pins"  ("pinnable_id", "profile_id", "profile_type", "pinnable_type")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_profile_pins_on_profile_id" ON "profile_pins"  ("profile_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "profiles" CASCADE[0m
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE TABLE "profiles" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "data" jsonb DEFAULT '{}' NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_profiles_on_user_id" ON "profiles"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "rating_votes" CASCADE[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "rating_votes" ("id" bigserial primary key, "article_id" bigint, "context" character varying DEFAULT 'explicit', "created_at" timestamp NOT NULL, "group" character varying, "rating" float, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_rating_votes_on_article_id" ON "rating_votes"  ("article_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_rating_votes_on_user_id_and_article_id_and_context" ON "rating_votes"  ("user_id", "article_id", "context")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "reactions" CASCADE[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "reactions" ("id" bigserial primary key, "category" character varying, "created_at" timestamp NOT NULL, "points" float DEFAULT 1.0, "reactable_id" bigint, "reactable_type" character varying, "status" character varying DEFAULT 'valid', "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_reactions_on_category" ON "reactions"  ("category")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_reactions_on_created_at" ON "reactions"  ("created_at")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_reactions_on_points" ON "reactions"  ("points")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_reactions_on_reactable_id_and_reactable_type" ON "reactions"  ("reactable_id", "reactable_type")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_reactions_on_reactable_type" ON "reactions"  ("reactable_type")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_reactions_on_user_id_reactable_id_reactable_type_category" ON "reactions"  ("user_id", "reactable_id", "reactable_type", "category")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "response_templates" CASCADE[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "response_templates" ("id" bigserial primary key, "content" text NOT NULL, "content_type" character varying NOT NULL, "created_at" timestamp NOT NULL, "title" character varying NOT NULL, "type_of" character varying NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "idx_response_templates_on_content_user_id_type_of_content_type" ON "response_templates"  ("content", "user_id", "type_of", "content_type")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_response_templates_on_type_of" ON "response_templates"  ("type_of")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_response_templates_on_user_id_and_type_of" ON "response_templates"  ("user_id", "type_of")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "roles" CASCADE[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "created_at" timestamp, "name" character varying, "resource_id" bigint, "resource_type" character varying, "updated_at" timestamp)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_roles_on_name_and_resource_type_and_resource_id" ON "roles"  ("name", "resource_type", "resource_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_roles_on_name" ON "roles"  ("name")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "site_configs" CASCADE[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "site_configs" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "value" text, "var" character varying NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_site_configs_on_var" ON "site_configs"  ("var")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "sponsorships" CASCADE[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "sponsorships" ("id" bigserial primary key, "blurb_html" text, "created_at" timestamp NOT NULL, "expires_at" timestamp, "featured_number" integer DEFAULT 0 NOT NULL, "instructions" text, "instructions_updated_at" timestamp, "level" character varying NOT NULL, "organization_id" bigint, "sponsorable_id" bigint, "sponsorable_type" character varying, "status" character varying DEFAULT 'none' NOT NULL, "tagline" character varying, "updated_at" timestamp NOT NULL, "url" character varying, "user_id" bigint)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_sponsorships_on_level" ON "sponsorships"  ("level")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_sponsorships_on_organization_id" ON "sponsorships"  ("organization_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_sponsorships_on_sponsorable_id_and_sponsorable_type" ON "sponsorships"  ("sponsorable_id", "sponsorable_type")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_sponsorships_on_status" ON "sponsorships"  ("status")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_sponsorships_on_user_id" ON "sponsorships"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "tag_adjustments" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "tag_adjustments" ("id" bigserial primary key, "adjustment_type" character varying, "article_id" bigint, "created_at" timestamp NOT NULL, "reason_for_adjustment" character varying, "status" character varying, "tag_id" bigint, "tag_name" character varying, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_tag_adjustments_on_tag_name_and_article_id" ON "tag_adjustments"  ("tag_name", "article_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "taggings" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "taggings" ("id" bigserial primary key, "context" character varying(128), "created_at" timestamp, "tag_id" bigint, "taggable_id" bigint, "taggable_type" character varying, "tagger_id" bigint, "tagger_type" character varying)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_context" ON "taggings"  ("context")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "taggings_idx" ON "taggings"  ("tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_tag_id" ON "taggings"  ("tag_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_taggable_id_and_taggable_type_and_context" ON "taggings"  ("taggable_id", "taggable_type", "context")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "taggings_idy" ON "taggings"  ("taggable_id", "taggable_type", "tagger_id", "context")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_taggable_id" ON "taggings"  ("taggable_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_taggable_type" ON "taggings"  ("taggable_type")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_tagger_id_and_tagger_type" ON "taggings"  ("tagger_id", "tagger_type")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_taggings_on_tagger_id" ON "taggings"  ("tagger_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "tags" CASCADE[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "tags" ("id" bigserial primary key, "alias_for" character varying, "badge_id" bigint, "bg_color_hex" character varying, "buffer_profile_id_code" character varying, "category" character varying DEFAULT 'uncategorized' NOT NULL, "created_at" timestamp, "hotness_score" integer DEFAULT 0, "keywords_for_search" character varying, "mod_chat_channel_id" bigint, "name" character varying, "pretty_name" character varying, "profile_image" character varying, "requires_approval" boolean DEFAULT FALSE, "rules_html" text, "rules_markdown" text, "short_summary" character varying, "social_image" character varying, "social_preview_template" character varying DEFAULT 'article', "submission_template" text, "supported" boolean DEFAULT FALSE, "taggings_count" integer DEFAULT 0, "text_color_hex" character varying, "updated_at" timestamp, "wiki_body_html" text, "wiki_body_markdown" text)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_tags_on_name" ON "tags"  ("name")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_tags_on_social_preview_template" ON "tags"  ("social_preview_template")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "tweets" CASCADE[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "tweets" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "extended_entities_serialized" text DEFAULT '--- {}
+', "favorite_count" integer, "full_fetched_object_serialized" text DEFAULT '--- {}
+', "hashtags_serialized" character varying DEFAULT '--- []
+', "in_reply_to_status_id_code" character varying, "in_reply_to_user_id_code" character varying, "in_reply_to_username" character varying, "is_quote_status" boolean, "last_fetched_at" timestamp, "media_serialized" text DEFAULT '--- []
+', "mentioned_usernames_serialized" character varying DEFAULT '--- []
+', "profile_image" character varying, "quoted_tweet_id_code" character varying, "retweet_count" integer, "source" character varying, "text" character varying, "tweeted_at" timestamp, "twitter_id_code" character varying, "twitter_name" character varying, "twitter_uid" character varying, "twitter_user_followers_count" integer, "twitter_user_following_count" integer, "twitter_username" character varying, "updated_at" timestamp NOT NULL, "urls_serialized" text DEFAULT '--- []
+', "user_id" bigint, "user_is_verified" boolean)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_blocks" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "user_blocks" ("id" bigserial primary key, "blocked_id" bigint NOT NULL, "blocker_id" bigint NOT NULL, "config" character varying DEFAULT 'default' NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_user_blocks_on_blocked_id_and_blocker_id" ON "user_blocks"  ("blocked_id", "blocker_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_subscriptions" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "user_subscriptions" ("id" bigserial primary key, "author_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "subscriber_email" character varying NOT NULL, "subscriber_id" bigint NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_subscription_sourceable_id" bigint, "user_subscription_sourceable_type" character varying)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_user_subscriptions_on_author_id" ON "user_subscriptions"  ("author_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_user_subscriptions_on_subscriber_email" ON "user_subscriptions"  ("subscriber_email")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_subscriber_id_and_email_with_user_subscription_source" ON "user_subscriptions"  ("subscriber_id", "subscriber_email", "user_subscription_sourceable_type", "user_subscription_sourceable_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_on_user_subscription_sourcebable_type_and_id" ON "user_subscriptions"  ("user_subscription_sourceable_type", "user_subscription_sourceable_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (13.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "apple_created_at" timestamp, "apple_username" character varying, "articles_count" integer DEFAULT 0 NOT NULL, "available_for" character varying, "badge_achievements_count" integer DEFAULT 0 NOT NULL, "behance_url" character varying, "bg_color_hex" character varying, "blocked_by_count" bigint DEFAULT 0 NOT NULL, "blocking_others_count" bigint DEFAULT 0 NOT NULL, "checked_code_of_conduct" boolean DEFAULT FALSE, "checked_terms_and_conditions" boolean DEFAULT FALSE, "comments_count" integer DEFAULT 0 NOT NULL, "config_font" character varying DEFAULT 'default', "config_navbar" character varying DEFAULT 'default' NOT NULL, "config_theme" character varying DEFAULT 'default', "confirmation_sent_at" timestamp, "confirmation_token" character varying, "confirmed_at" timestamp, "created_at" timestamp NOT NULL, "credits_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "current_sign_in_ip" inet, "currently_hacking_on" character varying, "currently_learning" character varying, "display_announcements" boolean DEFAULT TRUE, "display_sponsors" boolean DEFAULT TRUE, "dribbble_url" character varying, "editor_version" character varying DEFAULT 'v1', "education" character varying, "email" character varying, "email_badge_notifications" boolean DEFAULT TRUE, "email_comment_notifications" boolean DEFAULT TRUE, "email_community_mod_newsletter" boolean DEFAULT FALSE, "email_connect_messages" boolean DEFAULT TRUE, "email_digest_periodic" boolean DEFAULT FALSE NOT NULL, "email_follower_notifications" boolean DEFAULT TRUE, "email_membership_newsletter" boolean DEFAULT FALSE, "email_mention_notifications" boolean DEFAULT TRUE, "email_newsletter" boolean DEFAULT FALSE, "email_public" boolean DEFAULT FALSE, "email_tag_mod_newsletter" boolean DEFAULT FALSE, "email_unread_notifications" boolean DEFAULT TRUE, "employer_name" character varying, "employer_url" character varying, "employment_title" character varying, "encrypted_password" character varying DEFAULT '' NOT NULL, "experience_level" integer, "export_requested" boolean DEFAULT FALSE, "exported_at" timestamp, "facebook_created_at" timestamp, "facebook_url" character varying, "facebook_username" character varying, "failed_attempts" integer DEFAULT 0, "feed_admin_publish_permission" boolean DEFAULT TRUE, "feed_fetched_at" timestamp DEFAULT '2017-01-01 05:00:00', "feed_mark_canonical" boolean DEFAULT FALSE, "feed_referential_link" boolean DEFAULT TRUE NOT NULL, "feed_url" character varying, "following_orgs_count" integer DEFAULT 0 NOT NULL, "following_tags_count" integer DEFAULT 0 NOT NULL, "following_users_count" integer DEFAULT 0 NOT NULL, "github_created_at" timestamp, "github_repos_updated_at" timestamp DEFAULT '2017-01-01 05:00:00', "github_username" character varying, "gitlab_url" character varying, "inbox_guidelines" character varying, "inbox_type" character varying DEFAULT 'private', "instagram_url" character varying, "invitation_accepted_at" timestamp, "invitation_created_at" timestamp, "invitation_limit" integer, "invitation_sent_at" timestamp, "invitation_token" character varying, "invitations_count" integer DEFAULT 0, "invited_by_id" bigint, "invited_by_type" character varying, "language_settings" jsonb DEFAULT '{}' NOT NULL, "last_article_at" timestamp DEFAULT '2017-01-01 05:00:00', "last_comment_at" timestamp DEFAULT '2017-01-01 05:00:00', "last_followed_at" timestamp, "last_moderation_notification" timestamp DEFAULT '2017-01-01 00:00:00', "last_notification_activity" timestamp, "last_onboarding_page" character varying, "last_reacted_at" timestamp, "last_sign_in_at" timestamp, "last_sign_in_ip" inet, "latest_article_updated_at" timestamp, "linkedin_url" character varying, "location" character varying, "locked_at" timestamp, "mastodon_url" character varying, "medium_url" character varying, "mobile_comment_notifications" boolean DEFAULT TRUE, "mod_roundrobin_notifications" boolean DEFAULT TRUE, "monthly_dues" integer DEFAULT 0, "mostly_work_with" character varying, "name" character varying, "old_old_username" character varying, "old_username" character varying, "onboarding_package_requested" boolean DEFAULT FALSE, "organization_info_updated_at" timestamp, "payment_pointer" character varying, "permit_adjacent_sponsors" boolean DEFAULT TRUE, "profile_image" character varying, "profile_updated_at" timestamp DEFAULT '2017-01-01 05:00:00', "rating_votes_count" integer DEFAULT 0 NOT NULL, "reaction_notifications" boolean DEFAULT TRUE, "reactions_count" integer DEFAULT 0 NOT NULL, "registered" boolean DEFAULT TRUE, "registered_at" timestamp, "remember_created_at" timestamp, "remember_token" character varying, "reputation_modifier" float DEFAULT 1.0, "reset_password_sent_at" timestamp, "reset_password_token" character varying, "saw_onboarding" boolean DEFAULT TRUE, "score" integer DEFAULT 0, "secret" character varying, "sign_in_count" integer DEFAULT 0 NOT NULL, "signup_cta_variant" character varying, "spent_credits_count" integer DEFAULT 0 NOT NULL, "stackoverflow_url" character varying, "stripe_id_code" character varying, "subscribed_to_user_subscriptions_count" integer DEFAULT 0 NOT NULL, "summary" text, "text_color_hex" character varying, "twitch_url" character varying, "twitter_created_at" timestamp, "twitter_followers_count" integer, "twitter_following_count" integer, "twitter_username" character varying, "unconfirmed_email" character varying, "unlock_token" character varying, "unspent_credits_count" integer DEFAULT 0 NOT NULL, "updated_at" timestamp NOT NULL, "username" character varying, "website_url" character varying, "welcome_notifications" boolean DEFAULT TRUE NOT NULL, "workshop_expiration" timestamp, "youtube_url" character varying)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_apple_username" ON "users"  ("apple_username")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_confirmation_token" ON "users"  ("confirmation_token")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_created_at" ON "users"  ("created_at")[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_facebook_username" ON "users"  ("facebook_username")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_feed_fetched_at" ON "users"  ("feed_fetched_at")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_feed_url" ON "users"  ("feed_url") WHERE ((COALESCE(feed_url, ''::character varying))::text <> ''::text)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_github_username" ON "users"  ("github_username")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_invitation_token" ON "users"  ("invitation_token")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_invitations_count" ON "users"  ("invitations_count")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_invited_by_id" ON "users"  ("invited_by_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_invited_by_type_and_invited_by_id" ON "users"  ("invited_by_type", "invited_by_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_language_settings" ON "users" USING gin ("language_settings")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_old_old_username" ON "users"  ("old_old_username")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_twitter_username" ON "users"  ("twitter_username")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users_gdpr_delete_requests" CASCADE[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "users_gdpr_delete_requests" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "email" character varying NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer NOT NULL, "username" character varying)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users_roles" CASCADE[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "users_roles" ("role_id" bigint, "user_id" bigint)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_users_roles_on_user_id_and_role_id" ON "users_roles"  ("user_id", "role_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "webhook_endpoints" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "webhook_endpoints" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "events" character varying[] NOT NULL, "oauth_application_id" bigint, "source" character varying, "target_url" character varying NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_webhook_endpoints_on_events" ON "webhook_endpoints"  ("events")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_webhook_endpoints_on_oauth_application_id" ON "webhook_endpoints"  ("oauth_application_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_webhook_endpoints_on_target_url" ON "webhook_endpoints"  ("target_url")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_webhook_endpoints_on_user_id" ON "webhook_endpoints"  ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "welcome_notifications" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "welcome_notifications" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.5ms)[0m  [1m[35mALTER TABLE "ahoy_events" ADD CONSTRAINT "fk_rails_a0df956a8d"
+FOREIGN KEY ("visit_id")
+  REFERENCES "ahoy_visits" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE "ahoy_events" ADD CONSTRAINT "fk_rails_f1ed9fc4a0"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "ahoy_messages" ADD CONSTRAINT "fk_rails_eb7709e291"
+FOREIGN KEY ("feedback_message_id")
+  REFERENCES "feedback_messages" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "ahoy_messages" ADD CONSTRAINT "fk_rails_5894d6c55a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "ahoy_visits" ADD CONSTRAINT "fk_rails_db648022ad"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "api_secrets" ADD CONSTRAINT "fk_rails_9aaa384ac8"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (4.6ms)[0m  [1m[35mALTER TABLE "articles" ADD CONSTRAINT "fk_rails_2b371e3029"
+FOREIGN KEY ("collection_id")
+  REFERENCES "collections" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "articles" ADD CONSTRAINT "fk_rails_7809a1a57d"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "articles" ADD CONSTRAINT "fk_rails_3d31dad1cc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "audit_logs" ADD CONSTRAINT "fk_rails_1f26bc34ae"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "badge_achievements" ADD CONSTRAINT "fk_rails_27820f58ce"
+FOREIGN KEY ("badge_id")
+  REFERENCES "badges" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "badge_achievements" ADD CONSTRAINT "fk_rails_4a2e48ca67"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "badge_achievements" ADD CONSTRAINT "fk_rails_da1af2d63c"
+FOREIGN KEY ("rewarder_id")
+  REFERENCES "users" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "banished_users" ADD CONSTRAINT "fk_rails_153ba6df7a"
+FOREIGN KEY ("banished_by_id")
+  REFERENCES "users" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "buffer_updates" ADD CONSTRAINT "fk_rails_a4b9858400"
+FOREIGN KEY ("article_id")
+  REFERENCES "articles" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "buffer_updates" ADD CONSTRAINT "fk_rails_0b84f8076f"
+FOREIGN KEY ("tag_id")
+  REFERENCES "tags" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "buffer_updates" ADD CONSTRAINT "fk_rails_dfc43a0422"
+FOREIGN KEY ("approver_user_id")
+  REFERENCES "users" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "buffer_updates" ADD CONSTRAINT "fk_rails_c8c6d97c30"
+FOREIGN KEY ("composer_user_id")
+  REFERENCES "users" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "chat_channel_memberships" ADD CONSTRAINT "fk_rails_b2bb73e339"
+FOREIGN KEY ("chat_channel_id")
+  REFERENCES "chat_channels" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "chat_channel_memberships" ADD CONSTRAINT "fk_rails_4ba367990a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "classified_listings" ADD CONSTRAINT "fk_rails_fd32b9b45f"
+FOREIGN KEY ("classified_listing_category_id")
+  REFERENCES "classified_listing_categories" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "classified_listings" ADD CONSTRAINT "fk_rails_2571500d9c"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "classified_listings" ADD CONSTRAINT "fk_rails_8ec4e83da0"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "collections" ADD CONSTRAINT "fk_rails_217eef6689"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "collections" ADD CONSTRAINT "fk_rails_9b33697360"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "credits" ADD CONSTRAINT "fk_rails_5628a713de"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+ ON DELETE RESTRICT[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "credits" ADD CONSTRAINT "fk_rails_9001739776"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "custom_profile_fields" ADD CONSTRAINT "fk_rails_701e08633d"
+FOREIGN KEY ("profile_id")
+  REFERENCES "profiles" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "display_ad_events" ADD CONSTRAINT "fk_rails_1821fcc2c7"
+FOREIGN KEY ("display_ad_id")
+  REFERENCES "display_ads" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "display_ad_events" ADD CONSTRAINT "fk_rails_c692cbd6e1"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "display_ads" ADD CONSTRAINT "fk_rails_ca571cb23e"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "email_authorizations" ADD CONSTRAINT "fk_rails_faf7e663d1"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "feedback_messages" ADD CONSTRAINT "fk_rails_e81fc50c33"
+FOREIGN KEY ("affected_id")
+  REFERENCES "users" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "feedback_messages" ADD CONSTRAINT "fk_rails_c15ceb2839"
+FOREIGN KEY ("offender_id")
+  REFERENCES "users" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "feedback_messages" ADD CONSTRAINT "fk_rails_887c5f31ff"
+FOREIGN KEY ("reporter_id")
+  REFERENCES "users" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "github_repos" ADD CONSTRAINT "fk_rails_bbb82bb7f1"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "html_variant_successes" ADD CONSTRAINT "fk_rails_58c8775ab2"
+FOREIGN KEY ("article_id")
+  REFERENCES "articles" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "html_variant_successes" ADD CONSTRAINT "fk_rails_5b92043d3f"
+FOREIGN KEY ("html_variant_id")
+  REFERENCES "html_variants" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "html_variant_trials" ADD CONSTRAINT "fk_rails_ba2bd12f4d"
+FOREIGN KEY ("article_id")
+  REFERENCES "articles" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "html_variant_trials" ADD CONSTRAINT "fk_rails_823a31b2cf"
+FOREIGN KEY ("html_variant_id")
+  REFERENCES "html_variants" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "html_variants" ADD CONSTRAINT "fk_rails_4bb9f66719"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "identities" ADD CONSTRAINT "fk_rails_5373344100"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "mentions" ADD CONSTRAINT "fk_rails_1b711e94aa"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "messages" ADD CONSTRAINT "fk_rails_1321992401"
+FOREIGN KEY ("chat_channel_id")
+  REFERENCES "chat_channels" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "messages" ADD CONSTRAINT "fk_rails_273a25a7a6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "notes" ADD CONSTRAINT "fk_rails_36c9deba43"
+FOREIGN KEY ("author_id")
+  REFERENCES "users" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "notification_subscriptions" ADD CONSTRAINT "fk_rails_2bf71acda7"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "notifications" ADD CONSTRAINT "fk_rails_394d9847aa"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "notifications" ADD CONSTRAINT "fk_rails_b080fb4855"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "oauth_access_grants" ADD CONSTRAINT "fk_rails_b4b53e07b8"
+FOREIGN KEY ("application_id")
+  REFERENCES "oauth_applications" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "oauth_access_grants" ADD CONSTRAINT "fk_rails_330c32d8d9"
+FOREIGN KEY ("resource_owner_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "oauth_access_tokens" ADD CONSTRAINT "fk_rails_732cb83ab7"
+FOREIGN KEY ("application_id")
+  REFERENCES "oauth_applications" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "oauth_access_tokens" ADD CONSTRAINT "fk_rails_ee63f25419"
+FOREIGN KEY ("resource_owner_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "organization_memberships" ADD CONSTRAINT "fk_rails_715ab7f4fe"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "organization_memberships" ADD CONSTRAINT "fk_rails_57cf70d280"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "page_views" ADD CONSTRAINT "fk_rails_00f38b1a99"
+FOREIGN KEY ("article_id")
+  REFERENCES "articles" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "page_views" ADD CONSTRAINT "fk_rails_13a4e75c00"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "podcast_episode_appearances" ADD CONSTRAINT "fk_rails_d9250101ef"
+FOREIGN KEY ("podcast_episode_id")
+  REFERENCES "podcast_episodes" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "podcast_episode_appearances" ADD CONSTRAINT "fk_rails_09327c8b91"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "podcast_episodes" ADD CONSTRAINT "fk_rails_893fc9044f"
+FOREIGN KEY ("podcast_id")
+  REFERENCES "podcasts" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "podcast_ownerships" ADD CONSTRAINT "fk_rails_3710d65292"
+FOREIGN KEY ("podcast_id")
+  REFERENCES "podcasts" ("id")
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "podcast_ownerships" ADD CONSTRAINT "fk_rails_574aee0ec6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "podcasts" ADD CONSTRAINT "fk_rails_23fc7f8ed6"
+FOREIGN KEY ("creator_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "poll_options" ADD CONSTRAINT "fk_rails_aa85becb42"
+FOREIGN KEY ("poll_id")
+  REFERENCES "polls" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "poll_skips" ADD CONSTRAINT "fk_rails_97ff88c452"
+FOREIGN KEY ("poll_id")
+  REFERENCES "polls" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "poll_skips" ADD CONSTRAINT "fk_rails_4046c49c05"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "poll_votes" ADD CONSTRAINT "fk_rails_848ece0184"
+FOREIGN KEY ("poll_option_id")
+  REFERENCES "poll_options" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "poll_votes" ADD CONSTRAINT "fk_rails_a6e6974b7e"
+FOREIGN KEY ("poll_id")
+  REFERENCES "polls" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "poll_votes" ADD CONSTRAINT "fk_rails_b64de9b025"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "polls" ADD CONSTRAINT "fk_rails_48d9b585ee"
+FOREIGN KEY ("article_id")
+  REFERENCES "articles" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "profile_fields" ADD CONSTRAINT "fk_rails_df1b1bea83"
+FOREIGN KEY ("profile_field_group_id")
+  REFERENCES "profile_field_groups" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "profiles" ADD CONSTRAINT "fk_rails_e424190865"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "rating_votes" ADD CONSTRAINT "fk_rails_a3fec5b316"
+FOREIGN KEY ("article_id")
+  REFERENCES "articles" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "rating_votes" ADD CONSTRAINT "fk_rails_a47bf2c1e2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "reactions" ADD CONSTRAINT "fk_rails_9f02fc96a0"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "response_templates" ADD CONSTRAINT "fk_rails_a8702c6917"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "sponsorships" ADD CONSTRAINT "fk_rails_778bb453b1"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (6.1ms)[0m  [1m[35mALTER TABLE "sponsorships" ADD CONSTRAINT "fk_rails_b3190c5fc6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "tag_adjustments" ADD CONSTRAINT "fk_rails_a49150b7b2"
+FOREIGN KEY ("article_id")
+  REFERENCES "articles" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "tag_adjustments" ADD CONSTRAINT "fk_rails_c4e50e84fd"
+FOREIGN KEY ("tag_id")
+  REFERENCES "tags" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "tag_adjustments" ADD CONSTRAINT "fk_rails_e8f5a32807"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "taggings" ADD CONSTRAINT "fk_rails_9fcd2e236b"
+FOREIGN KEY ("tag_id")
+  REFERENCES "tags" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "tags" ADD CONSTRAINT "fk_rails_d11c10a859"
+FOREIGN KEY ("badge_id")
+  REFERENCES "badges" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "tags" ADD CONSTRAINT "fk_rails_a9dc141dc9"
+FOREIGN KEY ("mod_chat_channel_id")
+  REFERENCES "chat_channels" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "tweets" ADD CONSTRAINT "fk_rails_003928b7f5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE SET NULL[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "user_blocks" ADD CONSTRAINT "fk_rails_9457ce6a10"
+FOREIGN KEY ("blocked_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "user_blocks" ADD CONSTRAINT "fk_rails_d1bf232861"
+FOREIGN KEY ("blocker_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "user_subscriptions" ADD CONSTRAINT "fk_rails_59b0197af7"
+FOREIGN KEY ("author_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "user_subscriptions" ADD CONSTRAINT "fk_rails_1ed776f5d9"
+FOREIGN KEY ("subscriber_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "users_roles" ADD CONSTRAINT "fk_rails_eb7b4658f8"
+FOREIGN KEY ("role_id")
+  REFERENCES "roles" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "users_roles" ADD CONSTRAINT "fk_rails_4a41696df6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+ ON DELETE CASCADE[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "webhook_endpoints" ADD CONSTRAINT "fk_rails_083276d374"
+FOREIGN KEY ("oauth_application_id")
+  REFERENCES "oauth_applications" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "webhook_endpoints" ADD CONSTRAINT "fk_rails_819fdd0983"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210121102114)[0m
+  [1m[35m (16.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20151224175814),
+(20151224180956),
+(20151226205806),
+(20151231095411),
+(20151231102537),
+(20160101145545),
+(20160101170140),
+(20160104220657),
+(20160104221355),
+(20160104222032),
+(20160104223954),
+(20160104225041),
+(20160105211934),
+(20160111153315),
+(20160115190444),
+(20160120012230),
+(20160124203153),
+(20160124205229),
+(20160125202948),
+(20160126145035),
+(20160126152212),
+(20160128215217),
+(20160129154529),
+(20160131213109),
+(20160131213110),
+(20160131213111),
+(20160131213112),
+(20160131213113),
+(20160131234917),
+(20160201001953),
+(20160201002243),
+(20160201012919),
+(20160201014516),
+(20160202211114),
+(20160202214951),
+(20160203005540),
+(20160203011021),
+(20160203233256),
+(20160206011647),
+(20160211170239),
+(20160214023247),
+(20160226193243),
+(20160304000325),
+(20160304010353),
+(20160304011144),
+(20160309155009),
+(20160310024038),
+(20160317190829),
+(20160317190838),
+(20160318195259),
+(20160322214055),
+(20160323233659),
+(20160324231938),
+(20160329004330),
+(20160401203746),
+(20160418001613),
+(20160428002923),
+(20160503004547),
+(20160505014825),
+(20160510022025),
+(20160517144259),
+(20160517144335),
+(20160518202957),
+(20160525190703),
+(20160525192526),
+(20160602140503),
+(20160610135858),
+(20160610145259),
+(20160610155109),
+(20160703135819),
+(20160713202608),
+(20160726230520),
+(20160801212954),
+(20160809182110),
+(20160810191937),
+(20160819025830),
+(20160905190604),
+(20160908145640),
+(20160908151357),
+(20160926154138),
+(20160926164412),
+(20161013195522),
+(20161018201530),
+(20161124212209),
+(20161208193428),
+(20161211234357),
+(20161212161130),
+(20161213212554),
+(20161216165302),
+(20161219173922),
+(20161223053926),
+(20161226180959),
+(20161228210927),
+(20161229054605),
+(20170105141344),
+(20170110154028),
+(20170110170105),
+(20170119193031),
+(20170127194840),
+(20170206214820),
+(20170206220334),
+(20170208152018),
+(20170209164016),
+(20170213183337),
+(20170216145500),
+(20170228174838),
+(20170302152930),
+(20170303171502),
+(20170303180353),
+(20170309162937),
+(20170310003608),
+(20170317171912),
+(20170325040822),
+(20170330184420),
+(20170330222954),
+(20170403135236),
+(20170411145225),
+(20170502162438),
+(20170505210243),
+(20170517172352),
+(20170521154826),
+(20170523210349),
+(20170524160535),
+(20170531150807),
+(20170531151548),
+(20170602152759),
+(20170607191629),
+(20170610142132),
+(20170613193616),
+(20170615172623),
+(20170615172941),
+(20170616191722),
+(20170619151747),
+(20170620145442),
+(20170620212740),
+(20170622191911),
+(20170626211738),
+(20170627205501),
+(20170706212815),
+(20170711195143),
+(20170717214026),
+(20170718150429),
+(20170718174233),
+(20170719184042),
+(20170719211212),
+(20170725171619),
+(20170727002902),
+(20170727153841),
+(20170802204604),
+(20170804193835),
+(20170809182148),
+(20170821154300),
+(20170828165505),
+(20170829164950),
+(20170829190632),
+(20170831180005),
+(20170831200650),
+(20170905170750),
+(20170912012249),
+(20170920160022),
+(20170921205230),
+(20170921221837),
+(20171002180944),
+(20171002195852),
+(20171003191547),
+(20171003222833),
+(20171004025750),
+(20171012215224),
+(20171013180013),
+(20171019152130),
+(20171019215638),
+(20171020160338),
+(20171024171916),
+(20171024193812),
+(20171026214850),
+(20171030214855),
+(20171103165851),
+(20171104014225),
+(20171106203902),
+(20171110215815),
+(20171110223810),
+(20171116191214),
+(20171116203319),
+(20171204171217),
+(20171229192205),
+(20180103183451),
+(20180107004333),
+(20180110012012),
+(20180111170406),
+(20180115221125),
+(20180130192627),
+(20180131183322),
+(20180202171402),
+(20180208210732),
+(20180209174729),
+(20180210161930),
+(20180212153228),
+(20180213165354),
+(20180303210932),
+(20180304151124),
+(20180316143921),
+(20180316164921),
+(20180316174324),
+(20180321170500),
+(20180328194237),
+(20180328194253),
+(20180427160903),
+(20180502152520),
+(20180502152621),
+(20180502160428),
+(20180502174301),
+(20180502213919),
+(20180507191509),
+(20180508165244),
+(20180508170132),
+(20180508200948),
+(20180516173047),
+(20180516184437),
+(20180522195341),
+(20180531194107),
+(20180601145801),
+(20180601195848),
+(20180603160906),
+(20180604200603),
+(20180606155327),
+(20180608195204),
+(20180609191539),
+(20180612214259),
+(20180622173538),
+(20180624230435),
+(20180629201047),
+(20180703142743),
+(20180705194536),
+(20180707162348),
+(20180713180709),
+(20180716182629),
+(20180728201801),
+(20180806142338),
+(20180816165158),
+(20180821204032),
+(20180824191849),
+(20180826174411),
+(20180905013458),
+(20180924201325),
+(20180924204406),
+(20180928161837),
+(20180930015157),
+(20181001225906),
+(20181003173949),
+(20181005180705),
+(20181005200827),
+(20181008174839),
+(20181010204910),
+(20181016181008),
+(20181019195746),
+(20181020195949),
+(20181020195954),
+(20181026112019),
+(20181026214021),
+(20181111040732),
+(20181116223239),
+(20181117145537),
+(20181120170350),
+(20181127173004),
+(20181129222416),
+(20181130224531),
+(20181219215401),
+(20181227192353),
+(20190109212351),
+(20190115155656),
+(20190121172642),
+(20190121191754),
+(20190129173611),
+(20190129190135),
+(20190206164319),
+(20190206222055),
+(20190216185753),
+(20190227163543),
+(20190227163803),
+(20190305221008),
+(20190306082543),
+(20190315151829),
+(20190315222044),
+(20190318223433),
+(20190326085046),
+(20190327090030),
+(20190329103059),
+(20190401100844),
+(20190401100850),
+(20190401193017),
+(20190401213605),
+(20190402224426),
+(20190404102732),
+(20190405190915),
+(20190409123750),
+(20190410124957),
+(20190412093614),
+(20190415194929),
+(20190417171019),
+(20190417171020),
+(20190420000607),
+(20190425210432),
+(20190430123156),
+(20190501141654),
+(20190501180125),
+(20190501191830),
+(20190502165056),
+(20190504015859),
+(20190504131412),
+(20190521190118),
+(20190524214445),
+(20190525233909),
+(20190525233918),
+(20190525233934),
+(20190531085252),
+(20190531094609),
+(20190531094926),
+(20190603190201),
+(20190606202826),
+(20190607110030),
+(20190611102309),
+(20190611102923),
+(20190611144112),
+(20190611195955),
+(20190612095748),
+(20190612095959),
+(20190612174127),
+(20190614093041),
+(20190616024727),
+(20190616053854),
+(20190617101811),
+(20190617102149),
+(20190619153428),
+(20190624093012),
+(20190625143841),
+(20190626022355),
+(20190626221336),
+(20190628123548),
+(20190702194019),
+(20190703003817),
+(20190704082551),
+(20190704091636),
+(20190704105143),
+(20190705111810),
+(20190705114625),
+(20190708105607),
+(20190709192214),
+(20190710081915),
+(20190711070019),
+(20190711093610),
+(20190713213412),
+(20190713225409),
+(20190717220437),
+(20190717224405),
+(20190723094834),
+(20190801083510),
+(20190801132654),
+(20190818191954),
+(20190819104106),
+(20190822162434),
+(20190827163358),
+(20190906193806),
+(20190910153845),
+(20190918104106),
+(20190925171050),
+(20190925193205),
+(20191016135034),
+(20191025185619),
+(20191025202354),
+(20191031131016),
+(20191106095242),
+(20191106102826),
+(20191108153914),
+(20191203114809),
+(20191203160028),
+(20191203171558),
+(20191210144342),
+(20191215145706),
+(20191220120243),
+(20191223202251),
+(20191226202114),
+(20191227113154),
+(20191227114543),
+(20200106074859),
+(20200117135558),
+(20200117135902),
+(20200119214529),
+(20200120053525),
+(20200125204226),
+(20200205225813),
+(20200211192415),
+(20200212164359),
+(20200213182938),
+(20200221170905),
+(20200221184007),
+(20200222164815),
+(20200224153122),
+(20200225104037),
+(20200226081611),
+(20200226192145),
+(20200226205549),
+(20200226210111),
+(20200227214321),
+(20200303222558),
+(20200304164719),
+(20200304220534),
+(20200308144606),
+(20200311170959),
+(20200324113133),
+(20200324170819),
+(20200326110404),
+(20200326111645),
+(20200329103305),
+(20200331155903),
+(20200403203054),
+(20200405103927),
+(20200407081312),
+(20200407083405),
+(20200407083732),
+(20200407084807),
+(20200407090218),
+(20200407090914),
+(20200407091449),
+(20200409043946),
+(20200409050122),
+(20200411085952),
+(20200412194408),
+(20200420130910),
+(20200426124118),
+(20200427094852),
+(20200427233631),
+(20200501032629),
+(20200504075409),
+(20200511224704),
+(20200514162708),
+(20200514163014),
+(20200514212601),
+(20200515085746),
+(20200519220213),
+(20200520091835),
+(20200520092247),
+(20200520092613),
+(20200520092938),
+(20200520092951),
+(20200521103848),
+(20200521103911),
+(20200521103935),
+(20200521103952),
+(20200521153435),
+(20200525115740),
+(20200525120420),
+(20200525120642),
+(20200525125611),
+(20200526144234),
+(20200526145731),
+(20200526151431),
+(20200526151807),
+(20200527161505),
+(20200530084533),
+(20200601121243),
+(20200602174329),
+(20200604133925),
+(20200605170430),
+(20200605183117),
+(20200608175130),
+(20200609191943),
+(20200609192545),
+(20200609195523),
+(20200612140153),
+(20200615213003),
+(20200616200005),
+(20200617014320),
+(20200617014509),
+(20200617183058),
+(20200618212422),
+(20200702143618),
+(20200706184804),
+(20200707170245),
+(20200707173316),
+(20200707173524),
+(20200710174257),
+(20200712150048),
+(20200716125857),
+(20200717203432),
+(20200717220654),
+(20200719205123),
+(20200720143134),
+(20200720213710),
+(20200721213341),
+(20200723180841),
+(20200723203155),
+(20200725215546),
+(20200726215928),
+(20200727052235),
+(20200727163200),
+(20200731033002),
+(20200731041554),
+(20200803193841),
+(20200804035648),
+(20200805050048),
+(20200805100552),
+(20200805102249),
+(20200806052718),
+(20200806193438),
+(20200809200631),
+(20200811044202),
+(20200813031851),
+(20200813042118),
+(20200814142425),
+(20200814142648),
+(20200817205048),
+(20200818101637),
+(20200818101700),
+(20200818163445),
+(20200818163834),
+(20200818202007),
+(20200819162917),
+(20200820055018),
+(20200820093731),
+(20200820093752),
+(20200821035520),
+(20200822092853),
+(20200826072259),
+(20200826072722),
+(20200826131359),
+(20200826132009),
+(20200826132639),
+(20200827073520),
+(20200828032013),
+(20200828045600),
+(20200901084210),
+(20200902132326),
+(20200902204028),
+(20200904040009),
+(20200904151734),
+(20200910155145),
+(20200910205316),
+(20200911140318),
+(20200914143753),
+(20200914144033),
+(20200914144157),
+(20200914145500),
+(20200917114525),
+(20200917141134),
+(20200917141154),
+(20200917154147),
+(20200917154234),
+(20200917154256),
+(20200917154306),
+(20200918200231),
+(20200921160153),
+(20201001154006),
+(20201002102257),
+(20201002102303),
+(20201002104711),
+(20201005181510),
+(20201007085440),
+(20201007091041),
+(20201009040438),
+(20201012072557),
+(20201017160628),
+(20201019012200),
+(20201107111600),
+(20201114130315),
+(20201114151157),
+(20201119153512),
+(20201203063435),
+(20201208195636),
+(20210105183127),
+(20210108031718),
+(20210111045049),
+(20210111151630);
+
+[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2021-01-25 22:25:52.643213"], ["updated_at", "2021-01-25 22:25:52.643213"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "78b3a16cb9a4aea822e8c7c8c5f44707ee5e6c9d"], ["created_at", "2021-01-25 22:25:52.648332"], ["updated_at", "2021-01-25 22:25:52.648332"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

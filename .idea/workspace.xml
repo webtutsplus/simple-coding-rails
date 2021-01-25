@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f051a85e-e3a0-4c92-ba25-ea318887e223" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1nVqi5aodCFuiR8EjvNttZeNnHt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/.idea" />
+    </key>
+  </component>
+  <component name="RubyModuleManagerSettings">
+    <option name="blackListedRootsPaths">
+      <list>
+        <option value="$PROJECT_DIR$/docs" />
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f051a85e-e3a0-4c92-ba25-ea318887e223" name="Default Changelist" comment="" />
+      <created>1611485729695</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611485729695</updated>
+      <workItem from="1611485731369" duration="6370000" />
+      <workItem from="1611507068629" duration="6102000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/node_modules/redoc-cli/index.js" />
+        <option value="$PROJECT_DIR$/node_modules/pusher-js/src/core/pusher-with-encryption.js" />
+        <option value="$PROJECT_DIR$/node_modules/pusher-js/src/core/pusher.js" />
+      </list>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="351" y="194" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611486591695">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="351" y="194" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1360.768@0.0.1360.768" timestamp="1611486591695" />
+    <state width="1318" height="202" key="GridCell.Tab.0.bottom" timestamp="1611485950767">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1318" height="202" key="GridCell.Tab.0.bottom/0.0.1360.768@0.0.1360.768" timestamp="1611485950767" />
+    <state width="1318" height="202" key="GridCell.Tab.0.center" timestamp="1611485950765">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1318" height="202" key="GridCell.Tab.0.center/0.0.1360.768@0.0.1360.768" timestamp="1611485950765" />
+    <state width="1318" height="202" key="GridCell.Tab.0.left" timestamp="1611485950763">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1318" height="202" key="GridCell.Tab.0.left/0.0.1360.768@0.0.1360.768" timestamp="1611485950763" />
+    <state width="1318" height="202" key="GridCell.Tab.0.right" timestamp="1611485950766">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1318" height="202" key="GridCell.Tab.0.right/0.0.1360.768@0.0.1360.768" timestamp="1611485950766" />
+    <state x="357" y="148" width="810" height="472" key="find.popup" timestamp="1611612242699">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="357" y="148" width="810" height="472" key="find.popup/0.0.1360.768@0.0.1360.768" timestamp="1611612242699" />
+    <state x="378" y="173" width="858" height="554" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1611529472249" />
+    <state x="365" y="108" width="710" height="793" key="search.everywhere.popup" timestamp="1611528864861">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="345" y="92" width="670" height="676" key="search.everywhere.popup/0.0.1360.768@0.0.1360.768" timestamp="1611521932986" />
+    <state x="365" y="108" width="710" height="793" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1611528864861" />
+    <state x="410" y="231" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1611486759717">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="410" y="231" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1360.768@0.0.1360.768" timestamp="1611486759717" />
+  </component>
+</project>
