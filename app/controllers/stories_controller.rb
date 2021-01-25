@@ -51,6 +51,15 @@ class StoriesController < ApplicationController
     end
   end
 
+
+  def showapi
+    @story_show = true
+    @article = Article.find_by(path: "/#{params[:username].downcase}/#{params[:slug]}")&.decorate
+      #handle_article_show
+    msg = { :status => "ok", :message => "Success!", :html => "<b>...</b>" }
+    render :json => @article
+  end
+
   private
 
   def assign_hero_html

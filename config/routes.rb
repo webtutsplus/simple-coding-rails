@@ -1,6 +1,8 @@
 # rubocop:disable Metrics/BlockLength
 
 Rails.application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
   use_doorkeeper do
     controllers tokens: "oauth/tokens"
   end
@@ -547,6 +549,7 @@ Rails.application.routes.draw do
     get "/:username/:view" => "stories#index",
         :constraints => { view: /comments|moderate|admin/ }
     get "/:username/:slug" => "stories#show"
+    get "/:username/api/:slug" => "stories#showapi"
     get "/:sitemap" => "sitemaps#show",
         :constraints => { format: /xml/, sitemap: /sitemap-.+/ }
     get "/:username" => "stories#index", :as => "user_profile"
