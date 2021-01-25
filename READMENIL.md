@@ -25,11 +25,12 @@ yarn install --ignore-engines
 for error error dev.to@1.0.0: The engine "node" is incompatible with this
 module. Expected version "14.14.x". Got "14.15.0"
 
-
 rvm use 2.7.2
 
-
-########
-rvm use 2.7.2
+######## rvm use 2.7.2
 
 bundle install
+
+bin/setup
+
+bin/
