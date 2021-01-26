@@ -1,30 +1,5 @@
 <div class="crayons-article-actions">
   <div class="crayons-article-actions__inner">
-    <% if @article.published? %>
-
-      <%= render partial: "articles/reaction_button",
-                 locals: {
-                   category: :like,
-                   description: "Heart",
-                   image_path: "heart.svg",
-                   image_active_path: "heart-filled.svg"
-                 } %>
-      <%= render partial: "articles/reaction_button",
-                 locals: {
-                   category: :unicorn,
-                   description: "Unicorn",
-                   image_path: "unicorn.svg",
-                   image_active_path: "unicorn-filled.svg"
-                 } %>
-      <%= render partial: "articles/reaction_button",
-                 locals: {
-                   category: :readinglist,
-                   description: "Saved",
-                   image_path: "save.svg",
-                   image_active_path: "save-filled.svg"
-                 } %>
-    <% end %>
-
     <div class="align-center m:relative">
       <button id="article-show-more-button" class="dropbtn crayons-btn crayons-btn--ghost-dimmed crayons-btn--icon-rounded" aria-label="Toggle dropdown menu">
         <%= inline_svg_tag("overflow-horizontal.svg", aria: true, class: "dropdown-icon crayons-icon", title: "More...") %>

@@ -5,14 +5,14 @@ module Admin
     after_action :bust_ad_caches, only: %i[create update destroy]
 
     def index
-      @display_ads = DisplayAd.order(id: :desc)
-        .joins(:organization)
-        .includes([:organization])
-        .page(params[:page]).per(50)
-
-      return if params[:search].blank?
-
-      @display_ads = @display_ads.where("organizations.name ILIKE :search", search: "%#{params[:search]}%")
+      # @display_ads = DisplayAd.order(id: :desc)
+      #   .joins(:organization)
+      #   .includes([:organization])
+      #   .page(params[:page]).per(50)
+      #
+      # return if params[:search].blank?
+      #
+      # @display_ads = @display_ads.where("organizations.name ILIKE :search", search: "%#{params[:search]}%")
     end
 
     def new
