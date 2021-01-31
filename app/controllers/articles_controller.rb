@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   include ApplicationHelper
-
   before_action :authenticate_user!, except: %i[feed new]
   before_action :set_article, only: %i[edit manage update destroy stats admin_unpublish]
   before_action :raise_suspended, only: %i[new create update]
@@ -135,8 +134,8 @@ class ArticlesController < ApplicationController
                        @article.edited_at
                      end
     updated = @article.update(article_params_json.merge(edited_at: edited_at_date))
-    handle_notifications(updated)
-    Webhook::DispatchEvent.call("article_updated", @article) if updated
+    #handle_notifications(updated)
+    #Webhook::DispatchEvent.call("article_updated", @article) if updated
     respond_to do |format|
       format.html do
         # TODO: JSON should probably not be returned in the format.html section

@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get "/enter", to: "registrations#new", as: :sign_up
+    get "/all", to: "registrations#allarticles"
     get "/confirm-email", to: "devise/confirmations#new"
     delete "/sign_out", to: "devise/sessions#destroy"
   end
