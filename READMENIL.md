@@ -103,4 +103,4 @@ gcloud compute firewall-rules create default-allow-http-3000 \
 for the error HTTP Origin header (http://35.232.166.121:3000) didn't match
 request.base_url (http://35.232.166.121:3000)
 
-search the file where it exits and comment it outt
+search the file where it exits and comment it outtt
