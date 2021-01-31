@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   skip_before_action :track_ahoy_visit
   before_action :verify_private_forem
-  protect_from_forgery with: :exception, prepend: true
+  #protect_from_forgery with: :exception, prepend: true
   before_action :remember_cookie_sync
   before_action :forward_to_app_config_domain
 
@@ -91,6 +91,9 @@ class ApplicationController < ActionController::Base
   # This method is used by Devise to decide which is the path to redirect
   # the user to after a successful log in
   def after_sign_in_path_for(resource)
+    logger.info "neel after_sign_in_path_for**************************"
+    logger.info resource
+    console
     if current_user.saw_onboarding
       path = stored_location_for(resource) || request.env["omniauth.origin"] || root_path(signin: "true")
       signin_param = { "signin" => "true" } # the "signin" param is used by the service worker
