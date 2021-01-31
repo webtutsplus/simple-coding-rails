@@ -34,3 +34,73 @@ bundle install
 bin/setup
 
 bin/
+
+####################
+
+sudo apt-install ruby
+
+###install rvm gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys
+409B6B1796C275462A1703113804BB82D39DC0E3
+7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+sudo apt-get install software-properties-common sudo apt-add-repository -y
+ppa:rael-gc/rvm sudo apt-get update sudo apt-get install rvm
+
+sudo usermod -a -G rvm contact_webtutsplus
+
+#reboot
+
+gem install patron -v '0.13.3 bundle install
+
+sudo apt install ruby-bundler
+
+#ImageMagick git clone https://github.com/ImageMagick/ImageMagick.git
+ImageMagick-7.0.10 cd ImageMagick-7.0.10 ./configure make
+
+OR
+
+sudo apt install imagemagick
+
+#postgres
+
+sudo -u postgres psql CREATE ROLE contact_webtutsplus; GRANT ALL PRIVILEGES ON
+DATABASE practicaldeveloper_development TO contact_webtutsplus;
+
+#redis sudo apt install redis-server sudo nano /etc/redis/redis.conf #change:
+supervised systemd
+
+sudo systemctl restart redis.service
+
+#elastic search
+
+wget
+https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.5.2-linux-x86_64.tar.gz
+wget
+https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.5.2-linux-x86_64.tar.gz.sha512
+shasum -a 512 -c elasticsearch-7.5.2-linux-x86_64.tar.gz.sha512 tar -xzf
+elasticsearch-7.5.2-linux-x86_64.tar.gz cd elasticsearch-7.5.2/
+
+#napm and yarn sudo apt install npm sudo npm install --global yarn
+
+#missing dependecines #partorn sudo apt-get install libcurl3-dev
+
+#upgrade node,js curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+sudo apt-get install -y nodejs sudo yarn install
+
+######## PSQL permission error createuser --superuser <user_name> ALTER ROLE
+<user_name> SUPERUSER;
+
+#allow 3000
+
+gcloud compute firewall-rules create default-allow-http-3000 \
+ --allow tcp:3000 \
+ --source-ranges 0.0.0.0/0 \
+ --target-tags http-server \
+ --description "Allow port 3000 access to http-server"
+
+######################
+
+for the error HTTP Origin header (http://35.232.166.121:3000) didn't match
+request.base_url (http://35.232.166.121:3000)
+
+search the file where it exits and comment it out
