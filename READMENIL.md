@@ -104,3 +104,11 @@ for the error HTTP Origin header (http://35.232.166.121:3000) didn't match
 request.base_url (http://35.232.166.121:3000)
 
 search the file where it exits and comment it out
+
+https://stackoverflow.com/questions/33318107/how-do-i-start-foreman-server-on-background-on-production
+
+ssh into the remote machine start tmux by typing tmux into the shell start the
+process you want inside the started tmux session leave/detach the tmux session
+by typing Ctrl+B and then D
+
+tmux ls tmux attach tmux ctrl B + x to kill
