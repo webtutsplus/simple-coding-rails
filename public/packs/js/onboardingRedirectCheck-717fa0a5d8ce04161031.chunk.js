@@ -20,7 +20,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _cha
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! preact/devtools */"./node_modules/preact/devtools/dist/devtools.module.js");
-module.exports = __webpack_require__(/*! /Users/nmadhab/hobby/forem/app/javascript/packs/onboardingRedirectCheck.jsx */"./app/javascript/packs/onboardingRedirectCheck.jsx");
+module.exports = __webpack_require__(/*! /Users/nmadhab/hobby/simple-coding-rails/app/javascript/packs/onboardingRedirectCheck.jsx */"./app/javascript/packs/onboardingRedirectCheck.jsx");
 
 
 /***/ })

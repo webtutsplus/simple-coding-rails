@@ -13,6 +13,12 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def allarticles
+    @articles = Article.all
+    msg = { :status => "ok", :message => "Success!", :html => "<b>...</b>" }
+    render :json => @articles
+  end
+
   def create
     not_authorized unless SiteConfig.allow_email_password_registration || SiteConfig.waiting_on_first_user
     not_authorized if SiteConfig.waiting_on_first_user && ENV["FOREM_OWNER_SECRET"].present? &&

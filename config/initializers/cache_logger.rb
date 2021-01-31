@@ -1,5 +1,6 @@
 if Rails.env.development? && Rails.configuration.action_controller.perform_caching
-  ActiveSupport::Cache::Store.logger = Rails.logger
+  Rails.cache.silence!
+  ActiveSupport::Cache::Store.logger = nil
   ActiveSupport::Cache::Store.logger.level = Logger::DEBUG
 else
   Rails.cache.silence!

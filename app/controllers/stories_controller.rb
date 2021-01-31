@@ -14,9 +14,11 @@ class StoriesController < ApplicationController
 
   SIGNED_OUT_RECORD_COUNT = 60
 
-  before_action :authenticate_user!, except: %i[index search show showapi]
-  before_action :set_cache_control_headers, only: %i[index search show showapi]
+  before_action :authenticate_user!, except: %i[index search show showapi showallapi]
+  before_action :set_cache_control_headers, only: %i[index search show showapi showallapi]
+  before_action :require_no_authentication, only: %i[showallapi]
   before_action :redirect_to_lowercase_username, only: %i[index]
+  prepend_before_action :require_no_authentication, only: %i[showallapi]
 
   rescue_from ArgumentError, with: :bad_request
 
@@ -58,6 +60,15 @@ class StoriesController < ApplicationController
       #handle_article_show
     msg = { :status => "ok", :message => "Success!", :html => "<b>...</b>" }
     render :json => @article
+  end
+
+  def showallapi
+    #@story_show = true
+    logger.info "neel showallapi**************************8*********************"
+    @articles = Article.all
+    #handle_article_show
+    msg = { :status => "ok", :message => "Success!", :html => "<b>...</b>" }
+    render :json => @articles
   end
 
   private

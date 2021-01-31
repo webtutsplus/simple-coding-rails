@@ -116,7 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! preact/devtools */"./node_modules/preact/devtools/dist/devtools.module.js");
-module.exports = __webpack_require__(/*! /Users/nmadhab/hobby/forem/app/javascript/packs/Search.jsx */"./app/javascript/packs/Search.jsx");
+module.exports = __webpack_require__(/*! /Users/nmadhab/hobby/simple-coding-rails/app/javascript/packs/Search.jsx */"./app/javascript/packs/Search.jsx");
 
 
 /***/ })

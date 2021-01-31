@@ -66,6 +66,7 @@ module PracticalDeveloper
     # NOTE: [Rails 6]
     # To improve security, Rails embeds the purpose and expiry metadata inside encrypted or signed cookies value.
     config.action_dispatch.use_cookies_with_metadata = false
+    #config.cache_store.silence!
 
     # After-initialize checker to add routes to reserved words
     config.after_initialize do

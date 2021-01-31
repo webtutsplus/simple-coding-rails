@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get "/enter", to: "registrations#new", as: :sign_up
+    get "/all", to: "registrations#allarticles"
     get "/confirm-email", to: "devise/confirmations#new"
     delete "/sign_out", to: "devise/sessions#destroy"
   end
@@ -548,6 +549,7 @@ Rails.application.routes.draw do
     get "/:username/:slug/stats" => "articles#stats"
     get "/:username/:view" => "stories#index",
         :constraints => { view: /comments|moderate|admin/ }
+    get "/:username/all" => "stories#showallapi"
     get "/:username/:slug" => "stories#show"
     get "/:username/api/:slug" => "stories#showapi"
     get "/:sitemap" => "sitemaps#show",

@@ -19,7 +19,7 @@ eval("var _require = __webpack_require__(/*! twilio-video */ \"./node_modules/tw
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! preact/devtools */"./node_modules/preact/devtools/dist/devtools.module.js");
-module.exports = __webpack_require__(/*! /Users/nmadhab/hobby/forem/app/javascript/packs/videoChat.jsx */"./app/javascript/packs/videoChat.jsx");
+module.exports = __webpack_require__(/*! /Users/nmadhab/hobby/simple-coding-rails/app/javascript/packs/videoChat.jsx */"./app/javascript/packs/videoChat.jsx");
 
 
 /***/ })
