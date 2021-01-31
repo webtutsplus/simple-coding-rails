@@ -37,7 +37,7 @@ bin/
 
 ####################
 
-sudo apt-install ruby
+sudo apt-install ruby sudo apt-install ruby
 
 ###install rvm gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys
 409B6B1796C275462A1703113804BB82D39DC0E3
