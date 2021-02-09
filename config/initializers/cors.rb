@@ -4,9 +4,12 @@
 debug_cors = ENV["DEBUG_CORS"].present? ? true : false
 Rails.application.config.middleware.insert_before 0, Rack::Cors, debug: debug_cors, logger: (-> { Rails.logger }) do
   allow do
-    origins do |source, _env|
-      source # echo back the client's `Origin` header instead of using `*`
-    end
+    # origins do |source, _env|
+    #   source # echo back the client's `Origin` header instead of using `*`
+    # end
+    origins "localhost:8080"
+    resource "/all", headers: :any, methods: [:get]
+    resource "/tags", headers: :any, methods: [:get]
 
     # allowed public APIs
     %w[articles comments listings podcast_episodes tags users videos].each do |resource_name|
