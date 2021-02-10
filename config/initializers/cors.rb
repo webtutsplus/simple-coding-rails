@@ -7,7 +7,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors, debug: debug_co
     # origins do |source, _env|
     #   source # echo back the client's `Origin` header instead of using `*`
     # end
-    origins "*"
+    origins "localhost:8080"
     resource "/all", headers: :any, methods: [:get]
     resource "/tags", headers: :any, methods: [:get]
 
