@@ -112,3 +112,10 @@ process you want inside the started tmux session leave/detach the tmux session
 by typing Ctrl+B and then D
 
 tmux ls tmux attach tmux ctrl B + x to kill
+
+## Give Admin Privilege to the user
+
+- `bundle exec rails c`
+- `user1 = User.first`
+- `user1.add_role(:super_admin)`
+- `exit`
