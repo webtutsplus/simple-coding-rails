@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     get "/enter", to: "registrations#new", as: :sign_up
     get "/all", to: "leetcode_articles#allarticles"
     get "/tags", to: "leetcode_articles#tags"
+    get "/tags/:tag", to: "leetcode_articles#get_by_tag"
     get "/confirm-email", to: "devise/confirmations#new"
     delete "/sign_out", to: "devise/sessions#destroy"
   end
