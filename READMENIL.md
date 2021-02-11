@@ -119,3 +119,13 @@ tmux ls tmux attach tmux ctrl B + x to kill
 - `user1 = User.first`
 - `user1.add_role(:super_admin)`
 - `exit`
+
+## Deploying on server
+It is recommended to use the contact.webtutsplus@gmail.com account while deploying on the server
+
+* `tmux attach -t forem`
+* Press Ctrl+C to stop the server
+* `git remote update`
+* `git pull`
+* `bin/startup`
+* Press Ctrl+B and then D to detach from Tmux
