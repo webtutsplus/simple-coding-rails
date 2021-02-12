@@ -8,7 +8,8 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors, debug: debug_co
     #   source # echo back the client's `Origin` header instead of using `*`
     # end
     origins "*"
-    resource "/all", headers: :any, methods: [:get]
+    resource "/articles", headers: :any, methods: [:get]
+    resource "/articles/*", headers: :any, methods: [:get]
     resource "/tags", headers: :any, methods: [:get]
     resource "/tags/*", headers: :any, methods: [:get]
     # allowed public APIs
