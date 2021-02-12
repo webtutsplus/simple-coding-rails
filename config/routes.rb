@@ -18,7 +18,8 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get "/enter", to: "registrations#new", as: :sign_up
-    get "/all", to: "leetcode_articles#allarticles"
+    get "/articles", to: "leetcode_articles#allarticles"
+    get "/articles/:id", to: "leetcode_articles#get_article_by_id"
     get "/tags", to: "leetcode_articles#tags"
     get "/tags/:tag", to: "leetcode_articles#get_by_tag"
     get "/confirm-email", to: "devise/confirmations#new"
