@@ -15,6 +15,15 @@ port        ENV.fetch("PORT", 3000)
 #
 environment ENV.fetch("RAILS_ENV") { "development" }
 
+localhost_key = "#{File.join('config', 'local-certs', '/etc/letsencrypt/live/simplecoding.dev/privkey.pem')}"
+localhost_crt = "#{File.join('config', 'local-certs', '/etc/letsencrypt/live/simplecoding.dev/cert.pem')}"
+
+ssl_bind '0.0.0.0', 3000, {
+  key: localhost_key,
+  cert: localhost_crt,
+  verify_mode: 'none'
+}
+
 # Specifies the `pidfile` that Puma will use.
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
