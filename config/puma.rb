@@ -16,7 +16,7 @@ port        ENV.fetch("PORT", 3000)
 environment ENV.fetch("RAILS_ENV") { "development" }
 
 localhost_key = '/home/contact_webtutsplus/simple-coding-rails/sslcert/privkey.key'
-localhost_crt = '/etc/letsencrypt/live/simplecoding.dev/fullchain.pem'
+localhost_crt = '/home/contact_webtutsplus/simple-coding-rails/sslcert/cert.crt'
 
 ssl_bind '0.0.0.0', 3000, {
   key: localhost_key,
