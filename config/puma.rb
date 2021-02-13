@@ -15,8 +15,8 @@ port        ENV.fetch("PORT", 3000)
 #
 environment ENV.fetch("RAILS_ENV") { "development" }
 
-localhost_key = '/home/contact_webtutsplus/simple-coding-rails/sslcert/privkey.key'
-localhost_crt = '/home/contact_webtutsplus/simple-coding-rails/sslcert/cert.crt'
+localhost_key = '/home/contact_webtutsplus/simple-coding-rails/sslcert/privkey.pem'
+localhost_crt = '/home/contact_webtutsplus/simple-coding-rails/sslcert/cert.pem'
 
 ssl_bind '0.0.0.0', 3000, {
   key: localhost_key,
