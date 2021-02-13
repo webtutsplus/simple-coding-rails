@@ -15,8 +15,8 @@ port        ENV.fetch("PORT", 3000)
 #
 environment ENV.fetch("RAILS_ENV") { "development" }
 
-localhost_key = "#{File.join('config', 'local-certs', '/etc/letsencrypt/live/simplecoding.dev/privkey.pem')}"
-localhost_crt = "#{File.join('config', 'local-certs', '/etc/letsencrypt/live/simplecoding.dev/cert.pem')}"
+localhost_key = "#{File.join('/etc/letsencrypt/live', 'simplecoding.dev', 'privkey.pem')}"
+localhost_crt = "#{File.join('/etc/letsencrypt/live', 'simplecoding.dev', 'cert.pem')}"
 
 ssl_bind '0.0.0.0', 3000, {
   key: localhost_key,
