@@ -18,7 +18,7 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 localhost_key = '/etc/letsencrypt/live/simplecoding.dev/chain.pem'
 localhost_crt = '/etc/letsencrypt/live/simplecoding.dev/cert.pem'
 
-ssl_bind '0.0.0.0', 3000, {
+ssl_bind '0.0.0.0', 3035, {
   key: localhost_key,
   cert: localhost_crt,
   verify_mode: 'none'
