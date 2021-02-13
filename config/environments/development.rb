@@ -75,6 +75,7 @@ Rails.application.configure do
     config.hosts << /.*#{URI.parse(gitpod_workspace_url).host}/
   end
   config.app_domain = ENV["APP_DOMAIN"] || "localhost:3000"
+  config.hosts << "api.simplecoding.dev"
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
