@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require "pathname"
 require "fileutils"
+require 'dotenv/load'
 include FileUtils
 
 # path to your application root.
@@ -12,5 +13,11 @@ end
 
 chdir APP_ROOT do
   puts "== STARTING UP =="
-  system! "foreman start -f Procfile.dev"
+  if ENV["ENVIRONMENT"] == 'development'
+    system! "foreman start -f Procfile.dev"
+  elsif ENV["ENVIRONMENT"] == 'production'
+    system! "foreman start -f Procfile.prod"
+  else
+    puts 'Please specify ENV["ENVIRONMENT"] = production OR ENV["ENVIRONMENT"] = development in .env file'
+  end
 end
