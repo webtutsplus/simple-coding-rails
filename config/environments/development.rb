@@ -102,7 +102,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Debug is the default log_level, but can be changed per environment.
-  config.log_level = :debug
+  config.log_level = :error
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new($stdout)
