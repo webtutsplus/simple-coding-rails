@@ -121,11 +121,19 @@ tmux ls tmux attach tmux ctrl B + x to kill
 - `exit`
 
 ## Deploying on server
-It is recommended to use the contact.webtutsplus@gmail.com account while deploying on the server
 
-* `tmux attach -t forem`
-* Press Ctrl+C to stop the server
-* `git remote update`
-* `git pull`
-* `bin/startup`
-* Press Ctrl+B and then D to detach from Tmux
+It is recommended to use the contact.webtutsplus@gmail.com account while
+deploying on the server
+
+- `tmux attach -t forem`
+- Press Ctrl+C to stop the server
+- `git remote update`
+- `git pull`
+- `bin/startup`
+- Press Ctrl+B and then D to detach from Tmux
+
+## SSL
+
+- in `Procfile.dev`, the following code was used to start the server without ssl
+  `web: bin/rails s -p 3000 -b 0.0.0.0`
+- in `config/puma.rb`, the lines 18-25(inclusive) were added
