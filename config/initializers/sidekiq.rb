@@ -23,6 +23,7 @@ Rails.application.config.to_prepare do
 end
 
 Sidekiq.configure_server do |config|
+  config.logger = nil
   schedule_file = "config/schedule.yml"
   # @mstruve/@sre: sidekiq-cron still uses the removed poll_interval
   # to determine how often to poll for jobs so we should manually set it
