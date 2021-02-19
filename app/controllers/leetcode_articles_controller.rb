@@ -25,4 +25,10 @@ class LeetcodeArticlesController < Devise::RegistrationsController
     msg = { :status => "ok", :message => "Success!", :html => "<b>...</b>" }
     render :json => @articles
   end
+
+  def get_article_by_slug
+    @articles = Article.find_by_slug(params[:slug]).as_json(only: [:id, :title, :slug, :description, :processed_html, :main_image, :tag_list])
+    msg = { :status => "ok", :message => "Success!", :html => "<b>...</b>" }
+    render :json => @articles
+  end
 end
