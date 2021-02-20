@@ -559,6 +559,16 @@ Rails.application.routes.draw do
         :constraints => { format: /xml/, sitemap: /sitemap-.+/ }
     get "/:username" => "stories#index", :as => "user_profile"
 
+    #auth via api
+
+
+
+    namespace :simplecodingapi do
+      post "/login", to: 'signin#login'
+      post "/signup", to: 'signup#signup'
+    end
+
+
     root "stories#index"
   end
 end

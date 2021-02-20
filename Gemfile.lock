@@ -471,6 +471,8 @@ GEM
     nenv (0.3.0)
     netrc (0.11.0)
     nio4r (2.5.5)
+    nokogiri (1.11.1-x86_64-darwin)
+      racc (~> 1.4)
     nokogiri (1.11.1-x86_64-linux)
       racc (~> 1.4)
     notiffany (0.1.3)
@@ -848,6 +850,7 @@ GEM
     zonebie (0.6.1)
 
 PLATFORMS
+  x86_64-darwin-19
   x86_64-linux
 
 DEPENDENCIES
@@ -860,6 +863,7 @@ DEPENDENCIES
   amazing_print (~> 1.2)
   ancestry (~> 3.2)
   approvals (~> 0.0)
+  bcrypt (~> 3.1.7)
   better_errors (~> 2.9)
   binding_of_caller (~> 0.8)
   blazer (~> 2.4.0)
@@ -914,6 +918,7 @@ DEPENDENCIES
   jbuilder (~> 2.10)
   jquery-rails (~> 4.4)
   jsonapi-serializer (~> 2.1)
+  jwt
   kaminari (~> 1.2)
   katex (~> 0.6.1)
   knapsack_pro (~> 2.11.0)

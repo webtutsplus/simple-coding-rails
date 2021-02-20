@@ -140,3 +140,5 @@ deploying on the server
 - in `Procfile.dev`, the following code was used to start the server without ssl
   `web: bin/rails s -p 3000 -b 0.0.0.0`
 - in `config/puma.rb`, the lines 18-25(inclusive) were added
+
+# Rails shortcuts
