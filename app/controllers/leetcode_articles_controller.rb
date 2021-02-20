@@ -1,7 +1,6 @@
-class LeetcodeArticlesController < AuthenticationByApiController
-  # prepend_before_action :require_no_authentication, only: []
-  # skip_before_action :verify_authenticity_token
-  before_action :authorize_request_jwt
+class LeetcodeArticlesController < Devise::RegistrationsController
+  prepend_before_action :require_no_authentication, only: []
+  skip_before_action :verify_authenticity_token
 
   def allarticles
     @articles = Article.all.as_json(only: [:id, :title, :slug, :description, :processed_html, :main_image, :tag_list])
