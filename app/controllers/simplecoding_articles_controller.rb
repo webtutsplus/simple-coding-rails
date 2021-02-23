@@ -1,4 +1,4 @@
-class LeetcodeArticlesController < Devise::RegistrationsController
+class SimplecodingArticlesController < Devise::RegistrationsController
   prepend_before_action :require_no_authentication, only: []
   skip_before_action :verify_authenticity_token
 
