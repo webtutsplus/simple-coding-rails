@@ -7,6 +7,11 @@ Rails.application.routes.draw do
     controllers tokens: "oauth/tokens"
   end
 
+  namespace :simplecodingapi do
+    post "/signup", to: 'signup#signup'
+    post "/login", to: 'signin#login'
+  end
+
   # Devise does not support scoping omniauth callbacks under a dynamic segment
   # so this lives outside our i18n scope.
   devise_for :users, controllers: {
@@ -563,10 +568,7 @@ Rails.application.routes.draw do
 
 
 
-    namespace :simplecodingapi do
-      post "/login", to: 'signin#login'
-      post "/signup", to: 'signup#signup'
-    end
+
 
 
     root "stories#index"

@@ -12,6 +12,8 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors, debug: debug_co
     resource "/articles/*", headers: :any, methods: [:get]
     resource "/tags", headers: :any, methods: [:get]
     resource "/tags/*", headers: :any, methods: [:get]
+    resource "/simplecodingapi/signup", headers: :any, methods: [:post]
+    resource "/simplecodingapi/login", headers: :any, methods: [:post]
     # allowed public APIs
     %w[articles comments listings podcast_episodes tags users videos].each do |resource_name|
       # allow read operations, disallow custom headers (eg. api-key) and enable preflight caching
