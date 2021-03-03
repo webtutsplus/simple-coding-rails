@@ -68,7 +68,6 @@ module Search
       end
 
       def search_documents(params:)
-        puts "elastic neel", params
         set_query_size(params)
         query_hash = "Search::QueryBuilders::#{name.demodulize}".safe_constantize.new(params: params).as_hash
 
