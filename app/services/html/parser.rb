@@ -251,6 +251,17 @@ module Html
       self
     end
 
+    def addIdHeadings
+      doc = Nokogiri::HTML.fragment(@html)
+      doc.search("a.anchor").each do |anchor|
+        anchor.set_attribute("id", anchor.attr("name"))
+      end
+
+      @html = doc.to_html
+
+      self
+    end
+
     private
 
     def img_of_size(source, width = 880)

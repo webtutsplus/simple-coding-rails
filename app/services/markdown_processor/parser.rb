@@ -135,6 +135,7 @@ module MarkdownProcessor
       Html::Parser
         .new(html)
         .remove_nested_linebreak_in_list
+        .addIdHeadings
         .prefix_all_images
         .wrap_all_images_in_links
         .add_control_class_to_codeblock
