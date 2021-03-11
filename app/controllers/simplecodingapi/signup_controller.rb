@@ -18,6 +18,7 @@ module Simplecodingapi
 
     def signup
       @user = User.new(user_params)
+      @user.name = @user.email
       if @user.save
         render json: @user, status: :created
       else
