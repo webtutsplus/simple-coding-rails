@@ -127,6 +127,8 @@ deploying on the server
 
 - If you are deploying the website for the first time on a server, make sure
   that the Environment option in .env file is set to production
+  
+- If the website is being deployed for the first time on a server, make sure to forward port 443 to 3000 so that we do not have to type port number in the URL while using https:- Use the following command for port forwarding - `sudo iptables -t nat -I PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 3000`
 
 * `tmux attach -t forem`
 * Press Ctrl+C to stop the server
